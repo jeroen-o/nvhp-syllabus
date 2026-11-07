@@ -29,6 +29,17 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#234765">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Book", "@id": "https://nvhp-syllabus.nl/boek3.html#book", "name": "Boek 3 — Financieren", "author": {"@type": "Organization", "name": "Nederlandse Vereniging van Hypothecair Planners (NVHP)", "alternateName": "NVHP", "url": "https://www.hypothecairplanner.nl", "logo": "https://nvhp-syllabus.nl/apple-touch-icon.png", "sameAs": ["https://www.hypothecairplanner.nl"]}, "publisher": {"@type": "Organization", "name": "Nederlandse Vereniging van Hypothecair Planners (NVHP)", "alternateName": "NVHP", "url": "https://www.hypothecairplanner.nl", "logo": "https://nvhp-syllabus.nl/apple-touch-icon.png", "sameAs": ["https://www.hypothecairplanner.nl"]}, "inLanguage": "nl-NL", "datePublished": "2025-04", "isPartOf": {"@type": "CreativeWorkSeries", "name": "Syllabus Leergang Hypothecaire Planning", "url": "https://nvhp-syllabus.nl/"}, "url": "https://nvhp-syllabus.nl/boek3.html", "description": "Financieren en beleggen, vermogensallocatie, financiering van particulieren en ondernemers, de IB-ondernemer en de DGA. Boek 3 van de NVHP-syllabus Leergang Hypothecaire Planning.", "educationalUse": "Opleidingsmateriaal", "audience": {"@type": "Audience", "audienceType": "Hypotheekadviseurs"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Alle boeken", "item": "https://nvhp-syllabus.nl/"}, {"@type": "ListItem", "position": 2, "name": "Boek 3 — Financieren", "item": "https://nvhp-syllabus.nl/boek3.html"}]}]}</script>
+<script>
+function printWithPassword(slug) {
+  var pw = window.prompt("Voer het wachtwoord in om te printen:");
+  if (pw === null) return;
+  if (pw === "Agaat") {
+    window.open(slug + ".html", "_blank").print();
+  } else {
+    window.alert("Onjuist wachtwoord.");
+  }
+}
+</script>
 </head>
 <body>
 <header class="site-header no-print">
@@ -50,7 +61,7 @@
       </form>
       <div id="search-results" class="search-results" hidden></div>
     </div>
-    <button class="print-btn" onclick="window.open('boek3.html','_blank').print()">Print dit boek</button>
+    <button class="print-btn" onclick="printWithPassword('boek3')">Print dit boek</button>
   </div>
 </header>
 <section class="book-intro">

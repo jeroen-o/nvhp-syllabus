@@ -294,6 +294,17 @@ PAGE_TMPL = """<!doctype html>
 <title>{title} — NVHP Syllabus Hypothecair Planner</title>
 <meta name="description" content="Boek {num}: {title} — Syllabus Leergang Hypothecair Planner, NVHP 2025.">
 <link rel="stylesheet" href="style.css">
+<script>
+function printWithPassword(slug) {{
+  var pw = window.prompt("Voer het wachtwoord in om te printen:");
+  if (pw === null) return;
+  if (pw === "Agaat") {{
+    window.open(slug + ".html", "_blank").print();
+  }} else {{
+    window.alert("Onjuist wachtwoord.");
+  }}
+}}
+</script>
 </head>
 <body>
 <header class="site-header no-print">
@@ -311,7 +322,7 @@ PAGE_TMPL = """<!doctype html>
       <input type="search" id="site-search" placeholder="Zoek in alle boeken…" autocomplete="off" aria-label="Zoek in alle boeken">
       <div id="search-results" class="search-results" hidden></div>
     </div>
-    <button class="print-btn" onclick="window.open('{slug}.html','_blank').print()">Print dit boek</button>
+    <button class="print-btn" onclick="printWithPassword('{slug}')">Print dit boek</button>
   </div>
 </header>
 <section class="book-intro">
