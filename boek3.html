@@ -44,7 +44,10 @@
       <a href="wijzigingen.html">Wijzigingen</a>
     </nav>
     <div class="header-search">
-      <input type="search" id="site-search" placeholder="Zoek in alle boeken…" autocomplete="off" aria-label="Zoek in alle boeken">
+      <form class="header-search-form" id="site-search-form" role="search">
+        <input type="search" id="site-search" placeholder="Zoek in alle boeken…" autocomplete="off" aria-label="Zoek in alle boeken">
+        <button type="submit" class="header-search-btn">Zoeken</button>
+      </form>
       <div id="search-results" class="search-results" hidden></div>
     </div>
     <button class="print-btn" onclick="window.open('boek3.html','_blank').print()">Print dit boek</button>

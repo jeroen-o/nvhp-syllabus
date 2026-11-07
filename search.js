@@ -3,6 +3,7 @@
 
   var input = document.getElementById("site-search");
   var resultsEl = document.getElementById("search-results");
+  var form = document.getElementById("site-search-form");
   if (!input || !resultsEl) return;
 
   var BOOK_FILE = { 1: "boek1.html", 2: "boek2.html", 3: "boek3.html", 4: "boek4.html" };
@@ -133,8 +134,8 @@
 
   function search(q) {
     var nq = normalize(q.trim());
-    if (!nq) { render([], ""); return; }
-    loadIndex().then(function (idx) {
+    if (!nq) { render([], ""); return Promise.resolve(); }
+    return loadIndex().then(function (idx) {
       var qWords = nq.split(/\s+/);
       var scored = idx
         .map(function (entry) { return { raw: entry.raw, s: score(entry, nq, qWords) }; })
@@ -168,9 +169,34 @@
     } else if (e.key === "Enter" && items.length) {
       e.preventDefault();
       var target = activeIndex >= 0 ? items[activeIndex] : items[0];
-      window.location.href = target.getAttribute("href");
+      navigateTo(target);
     }
   });
+
+  function navigateTo(el) {
+    var href = el.getAttribute("href");
+    if (el.classList.contains("sr-item-mc")) {
+      window.open(href, "_blank", "noopener");
+    } else {
+      window.location.href = href;
+    }
+  }
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      clearTimeout(debounceTimer);
+      search(input.value).then(function () {
+        var items = resultsEl.querySelectorAll(".sr-item");
+        if (items.length) {
+          var target = activeIndex >= 0 ? items[activeIndex] : items[0];
+          navigateTo(target);
+        } else {
+          input.focus();
+        }
+      });
+    });
+  }
 
   function updateActive(items) {
     items.forEach(function (el, i) { el.classList.toggle("is-active", i === activeIndex); });
