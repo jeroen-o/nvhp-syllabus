@@ -1,0 +1,323 @@
+{
+  "applied_on": "2026-11-07",
+  "updates": [
+    {
+      "book": "boek1.html",
+      "topic": "Box 1 — tarieven (jonger dan AOW-leeftijd)",
+      "source": "Belastingdienst — tarieven box 1, voorlopige aanslag 2026",
+      "source_url": "https://www.belastingdienst.nl/wps/wcm/connect/nl/voorlopige-aanslag/content/voorlopige-aanslag-tarieven-en-heffingskortingen",
+      "oud_fragment": "De tarieven in box 1 (2025) voor belastingplichtigen jonger dan de AOW-leeftijd zien er als volgt uit 9:",
+      "nieuw_fragment": "De tarieven in box 1 (2026) voor belastingplichtigen jonger dan de AOW-leeftijd zien er als volgt uit 9:"
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Box 1 — schijventabel (jonger dan AOW-leeftijd)",
+      "source": "Belastingdienst — tarieven box 1, voorlopige aanslag 2026",
+      "source_url": "https://www.belastingdienst.nl/wps/wcm/connect/nl/voorlopige-aanslag/content/voorlopige-aanslag-tarieven-en-heffingskortingen",
+      "oud_fragment": "<p>Schijf       Belastbaar inkomen                                   Percentage 1            tot € 38.441                                   …",
+      "nieuw_fragment": "<p>Schijf       Belastbaar inkomen                                   Percentage 1            tot € 38.883                                   …"
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Box 1 — schijfgrenzen en tarieven (toelichtende tekst)",
+      "source": "Belastingdienst — tarieven box 1, voorlopige aanslag 2026",
+      "source_url": "https://www.belastingdienst.nl/wps/wcm/connect/nl/voorlopige-aanslag/content/voorlopige-aanslag-tarieven-en-heffingskortingen",
+      "oud_fragment": "In 2025 kennen wij voor belastingplichtigen die de AOW-leeftijd nog niet hebben bereikt drie tarieven: 35,82, 37,48 en 49,50%. De eerste sch…",
+      "nieuw_fragment": "In 2026 kennen wij voor belastingplichtigen die de AOW-leeftijd nog niet hebben bereikt drie tarieven: 35,75, 37,56 en 49,50%. De eerste sch…"
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Box 2 — schijfgrens (definitie boxenstructuur)",
+      "source": "Belastingplan 2026 / viajuridica.nl, wetstoelichting tarief box 2",
+      "source_url": "https://www.viajuridica.nl/informatiesoorten/wetstoelichtingen/tarief-box-2-art-2-12-wet-ib-2001",
+      "oud_fragment": "box 2: belastbaar inkomen uit aanmerkelijk belang, tot en met € 67.804 24,50 procent en hoger dan € 67.804 31,00 procent.",
+      "nieuw_fragment": "box 2: belastbaar inkomen uit aanmerkelijk belang, tot en met € 68.843 24,50 procent en hoger dan € 68.843 31,00 procent."
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Box 2 — schijfgrens (toelichting)",
+      "source": "Belastingplan 2026 / viajuridica.nl, wetstoelichting tarief box 2",
+      "source_url": "https://www.viajuridica.nl/informatiesoorten/wetstoelichtingen/tarief-box-2-art-2-12-wet-ib-2001",
+      "oud_fragment": "In 2025 zijn er twee schijven in box 2. Over AB-inkomen tot en met € 67.804 wordt 24,50 procent belasting geheven en daarboven 31 procent.",
+      "nieuw_fragment": "In 2026 zijn er twee schijven in box 2. Over AB-inkomen tot en met € 68.843 wordt 24,50 procent belasting geheven en daarboven 31 procent."
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Algemene heffingskorting — afbouwgrens en maximum",
+      "source": "Belastingdienst / FNV heffingskortingen 2026",
+      "source_url": "https://www.fnv.nl/getmedia/4a4853d6-df54-4b5d-87be-d519894d9f2f/260042-08-heffingskortingen-2026-ia.pdf",
+      "oud_fragment": "Dat houdt inmiddels in 2025 in dat vanaf een belastbaar inkomen uit werk en woning in box 1 van € 28.406 de algemene heffingskorting lager w…",
+      "nieuw_fragment": "Dat houdt inmiddels in 2026 in dat vanaf een belastbaar inkomen uit werk en woning in box 1 van € 29.736 de algemene heffingskorting lager w…"
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Algemene heffingskorting — tabeltitel",
+      "source": "Belastingdienst / FNV heffingskortingen 2026",
+      "source_url": "https://www.fnv.nl/getmedia/4a4853d6-df54-4b5d-87be-d519894d9f2f/260042-08-heffingskortingen-2026-ia.pdf",
+      "oud_fragment": "<p>In 2025 nog niet de AOW-leeftijd bereikt</p>",
+      "nieuw_fragment": "<p>In 2026 nog niet de AOW-leeftijd bereikt</p>"
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Algemene heffingskorting — afbouwtabel",
+      "source": "Belastingdienst / FNV heffingskortingen 2026",
+      "source_url": "https://www.fnv.nl/getmedia/4a4853d6-df54-4b5d-87be-d519894d9f2f/260042-08-heffingskortingen-2026-ia.pdf",
+      "oud_fragment": "Belastbaar inkomen uit werk en woning vanaf                            tot Algemene heffingskorting 0                      € 28.406        €…",
+      "nieuw_fragment": "Belastbaar inkomen uit werk en woning vanaf                            tot Algemene heffingskorting 0                      € 29.736        €…"
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Overzicht heffingskortingen — algemene heffingskorting en arbeidskorting",
+      "source": "Belastingdienst / FNV heffingskortingen 2026 (arbeidskorting: bronnen wijken af tussen € 5.685 en € 5.712 — hier de meest genoemde waarde aangehouden)",
+      "source_url": "https://www.fnv.nl/getmedia/4a4853d6-df54-4b5d-87be-d519894d9f2f/260042-08-heffingskortingen-2026-ia.pdf",
+      "note": "** = AOW-kolom (1.536 / 2.802) hier NIET bijgewerkt: geen harde 2026-bronbevestiging gevonden. Voetnootcijfers 115/116 (PDF-extractieartefact) zijn bij deze gelegenheid verwijderd.",
+      "oud_fragment": "Algemene heffingskorting                              € 3.068115*              € 1.536* Arbeidskorting                                      …",
+      "nieuw_fragment": "Algemene heffingskorting                              € 3.115*              € 1.536** Arbeidskorting                                        …"
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Arbeidskorting — maximum",
+      "source": "Rendement.nl / rekenmachinepro.nl, arbeidskorting 2026",
+      "source_url": "https://www.rendement.nl/aangifte-loonheffingen/nieuws/arbeidskorting-stijgt-opnieuw-licht-in-2026.html",
+      "oud_fragment": "Het maximale bedrag van de arbeidskorting is in 2025 € 5.599.",
+      "nieuw_fragment": "Het maximale bedrag van de arbeidskorting is in 2026 € 5.685 (sommige bronnen noemen € 5.712; het Belastingplan 2026 was op het moment van b…"
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Eigenwoningforfait — jaartal",
+      "source": "Belastingdienst — tabel eigenwoningforfait 2026",
+      "source_url": "https://www.belastingdienst.nl/wps/wcm/connect/nl/koopwoning/content/hoe-werkt-eigenwoningforfait",
+      "oud_fragment": "<p>Het eigenwoningforfait is in 2025 gesteld op:</p>",
+      "nieuw_fragment": "<p>Het eigenwoningforfait is in 2026 gesteld op:</p>"
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Eigenwoningforfait — hoogste schijf en toeslag",
+      "source": "Belastingdienst — tabel eigenwoningforfait 2026 / Eerste Kamer achtergrondrapport",
+      "source_url": "https://www.belastingdienst.nl/wps/wcm/connect/nl/koopwoning/content/hoe-werkt-eigenwoningforfait",
+      "note": "'€ 1.3320.000' in de brontekst was een PDF-extractiefout (twee cijfers aan elkaar geplakt); bij deze gelegenheid gecorrigeerd én bijgewerkt naar 2026.",
+      "oud_fragment": "€ 75.000            € 1.330.000 0,35% van deze waarde € 1.3320.000                          - € 4.655 vermeerderd met 2,35% van de waarde vo…",
+      "nieuw_fragment": "€ 75.000            € 1.350.000 0,35% van deze waarde € 1.350.000                          - € 4.725 vermeerderd met 2,35% van de waarde voo…"
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Overdrachtsbelasting — startersgrens",
+      "source": "Belastingdienst — startersvrijstelling overdrachtsbelasting",
+      "source_url": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/woning/overdrachtsbelasting/startersvrijstelling",
+      "oud_fragment": "Tot 2025 was die waarde € 510.000 en vanaf 2025 is dat € 525.000.",
+      "nieuw_fragment": "Tot 2025 was die waarde € 525.000 en vanaf 2026 is dat € 555.000."
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Overdrachtsbelasting — startersgrens (voorwaarde)",
+      "source": "Belastingdienst — startersvrijstelling overdrachtsbelasting",
+      "source_url": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/woning/overdrachtsbelasting/startersvrijstelling",
+      "oud_fragment": "• de woning is maximaal € 525.000.",
+      "nieuw_fragment": "• de woning is maximaal € 555.000."
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Overdrachtsbelasting — algemeen tarief (niet-eigen-bewoning)",
+      "source": "SRA — overdrachtsbelasting 2026",
+      "source_url": "https://www.sra.nl/nieuws/259001/2026/01/overdrachtsbelasting-drie-tarieven-en-hogere-startersvrijstelling-in-2026",
+      "oud_fragment": "Beleggers in box 3 betalen sinds 2023 10,4 procent.",
+      "nieuw_fragment": "Beleggers in box 3 betalen in 2026 8 procent (dit was 10,4 procent van 2023 tot en met 2025)."
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Overdrachtsbelasting — algemeen tarief (niet zelfbewoning)",
+      "source": "SRA — overdrachtsbelasting 2026",
+      "source_url": "https://www.sra.nl/nieuws/259001/2026/01/overdrachtsbelasting-drie-tarieven-en-hogere-startersvrijstelling-in-2026",
+      "oud_fragment": "Kopers betalen vanaf 1 januari 2023 10,4 procent overdrachtsbelasting als ze niet zelf in de woning gaan wonen.",
+      "nieuw_fragment": "Kopers betalen in 2026 8 procent overdrachtsbelasting als ze niet zelf in de woning gaan wonen (van 2023 tot en met 2025 was dit 10,4 procen…"
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Overdrachtsbelasting — tweede woningen",
+      "source": "SRA — overdrachtsbelasting 2026",
+      "source_url": "https://www.sra.nl/nieuws/259001/2026/01/overdrachtsbelasting-drie-tarieven-en-hogere-startersvrijstelling-in-2026",
+      "oud_fragment": "ook onder het 10,4 procent tarief.",
+      "nieuw_fragment": "ook onder het 8 procent tarief (2023-2025: 10,4 procent)."
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Overdrachtsbelasting — wooncoöperaties",
+      "source": "SRA — overdrachtsbelasting 2026",
+      "source_url": "https://www.sra.nl/nieuws/259001/2026/01/overdrachtsbelasting-drie-tarieven-en-hogere-startersvrijstelling-in-2026",
+      "oud_fragment": "Wooncoöperaties betalen geen 10,4 procent overdrachtsbelasting, maar twee procent",
+      "nieuw_fragment": "Wooncoöperaties betalen geen 8 procent overdrachtsbelasting (2023-2025: 10,4 procent), maar twee procent"
+    },
+    {
+      "book": "boek2.html",
+      "topic": "Schenkbelasting — vrijstellingstabel",
+      "source": "Belastingdienst — schenkingsvrijstellingen 2026",
+      "source_url": "https://www.belastingdienst.nl/wps/wcm/connect/nl/schenken/content/tot-welk-bedrag-belastingvrij-schenken",
+      "note": "* = bedragen 2025, (nog) niet bijgewerkt: voor de eenmalige vrijstelling (18-40 jaar) en de studievrijstelling is geen harde 2026-bronbevestiging gevonden — controleer voor gebruik bij belastingdienst.nl.",
+      "oud_fragment": "Vrijstellingsbedragen schenkbelasting﻿ Kinderen jaarlijks                                                  €   6.713 Kinderen 18 - 40 jaar (…",
+      "nieuw_fragment": "Vrijstellingsbedragen schenkbelasting﻿ Kinderen jaarlijks                                                  €   6.908 Kinderen 18 - 40 jaar (…"
+    },
+    {
+      "book": "boek2.html",
+      "topic": "Schenking — jaarlijkse vrijstelling overige verkrijgers (ex-partner)",
+      "source": "Belastingdienst — schenkingsvrijstellingen 2026",
+      "source_url": "https://www.belastingdienst.nl/wps/wcm/connect/nl/schenken/content/tot-welk-bedrag-belastingvrij-schenken",
+      "oud_fragment": "Als er meer wordt betaald dan € 2.690 (2025) per jaar, dan is het meerdere een belaste schenking.",
+      "nieuw_fragment": "Als er meer wordt betaald dan € 2.769 (2026) per jaar, dan is het meerdere een belaste schenking."
+    },
+    {
+      "book": "boek2.html",
+      "topic": "Schenking — jaarlijkse vrijstelling overige verkrijgers (erfgenaam)",
+      "source": "Belastingdienst — schenkingsvrijstellingen 2026",
+      "source_url": "https://www.belastingdienst.nl/wps/wcm/connect/nl/schenken/content/tot-welk-bedrag-belastingvrij-schenken",
+      "oud_fragment": "De schenkingsvrijstelling is dan anno 2025 € 2.690 en het tarief tot € 154.197 30 procent en erboven 40 procent.",
+      "nieuw_fragment": "De schenkingsvrijstelling is dan anno 2026 € 2.769 en het tarief tot € 154.197 (bedrag 2025, nog niet herbevestigd voor 2026) 30 procent en …"
+    },
+    {
+      "book": "boek3.html",
+      "topic": "Box 2 — schijfgrens en dubbele lage schijf fiscaal partners",
+      "source": "Belastingplan 2026 / dezaak.nl",
+      "source_url": "https://www.dezaak.nl/financien/belastingen/belastingwijzigingen-2026-dit-staat-ondernemers-te-wachten/",
+      "note": "Alleen de losstaande grensvermelding is bijgewerkt. Een eventuele doorgerekende casus in dezelfde passage is bewust niet aangepast — zie reikwijdte hierboven.",
+      "oud_fragment": "tweemaal de lage schijf toepassen, tot € 135.608.",
+      "nieuw_fragment": "tweemaal de lage schijf toepassen, tot € 137.686."
+    },
+    {
+      "book": "boek3.html",
+      "topic": "NHG-grens en energiebesparende voorzieningen (ebv)",
+      "source": "NHG-normering 2026 / Hypotheker.nl",
+      "source_url": "https://www.hypotheker.nl/actueel/nieuwsberichten/2025/nhg-grens-vastgesteld-voor-2026/",
+      "oud_fragment": "Op basis van deze systematiek neemt de NHG-grens in 2025 toe tot € 450.000 (€ 15.000 meer dan in 2024). Om verduurzaming te stimuleren is ex…",
+      "nieuw_fragment": "Op basis van deze systematiek neemt de NHG-grens in 2026 toe tot € 470.000 (€ 20.000 meer dan in 2025). Om verduurzaming te stimuleren is ex…"
+    },
+    {
+      "book": "boek3.html",
+      "topic": "NHG-grens woonwagens — vervallen aparte grens",
+      "source": "NHG-normering 2026 / Hypotheker.nl",
+      "source_url": "https://www.hypotheker.nl/actueel/nieuwsberichten/2025/nhg-grens-vastgesteld-voor-2026/",
+      "oud_fragment": "De NHG-grens voor woonwagens wordt in 2025 verhoogd van € 166.000 naar € 172.000. Inclusief ebv stijgt deze naar € 182.320.",
+      "nieuw_fragment": "Tot en met 2025 gold voor woonwagens een eigen, lagere NHG-grens (2025: € 172.000, met ebv € 182.320). Per 1 januari 2026 is deze aparte gre…"
+    },
+    {
+      "book": "boek3.html",
+      "topic": "NHG — nieuwbouw, maximale kostengrens (a t/m i resp. a t/m h)",
+      "source": "NHG-normering 2026 / Hypotheker.nl",
+      "source_url": "https://www.hypotheker.nl/actueel/nieuwsberichten/2025/nhg-grens-vastgesteld-voor-2026/",
+      "oud_fragment": "het totaal van a t/m i mag maximaal € 477.000 zijn. En het totaal van a t/m h mag maximaal € 450.000 zijn.",
+      "nieuw_fragment": "het totaal van a t/m i mag maximaal € 498.200 zijn. En het totaal van a t/m h mag maximaal € 470.000 zijn."
+    },
+    {
+      "book": "boek3.html",
+      "topic": "NHG — nieuwbouw, A++++ label",
+      "source": "NHG-normering 2026 / Hypotheker.nl",
+      "source_url": "https://www.hypotheker.nl/actueel/nieuwsberichten/2025/nhg-grens-vastgesteld-voor-2026/",
+      "oud_fragment": "bij koop van een woning met een A++++ label mag het totaal van a, b en i maximaal € 477.000 zijn.",
+      "nieuw_fragment": "bij koop van een woning met een A++++ label mag het totaal van a, b en i maximaal € 498.200 zijn."
+    },
+    {
+      "book": "boek3.html",
+      "topic": "NHG — kostengrens verkrijging bestaande woning (voorwaarde 1)",
+      "source": "NHG-normering 2026 / Hypotheker.nl",
+      "source_url": "https://www.hypotheker.nl/actueel/nieuwsberichten/2025/nhg-grens-vastgesteld-voor-2026/",
+      "note": "Alleen de grensvermelding is bijgewerkt; het eronder getoonde rekenvoorbeeld (€ 205.000, 6%, € 12.300) gebruikt andere, op zichzelf staande bedragen en is ongewijzigd gelaten.",
+      "oud_fragment": "Het bedrag voor de verkrijging in eigendom van de woning is maximaal € 450.000.",
+      "nieuw_fragment": "Het bedrag voor de verkrijging in eigendom van de woning is maximaal € 470.000."
+    },
+    {
+      "book": "boek3.html",
+      "topic": "Box 2 — schijfgrens en tarief",
+      "source": "Belastingplan 2026 / viajuridica.nl",
+      "source_url": "https://www.viajuridica.nl/informatiesoorten/wetstoelichtingen/tarief-box-2-art-2-12-wet-ib-2001",
+      "oud_fragment": "tegen een inkomstenbelastingtarief van 24,50 procent tot € 67.804 inkomen in box 2 en daarboven van 31 procent (2025).",
+      "nieuw_fragment": "tegen een inkomstenbelastingtarief van 24,50 procent tot € 68.843 inkomen in box 2 en daarboven van 31 procent (2026)."
+    },
+    {
+      "book": "boek3.html",
+      "topic": "Box 1 — hoogste schijf en aftrektarief eigenwoningrente",
+      "source": "Belastingdienst — tarieven box 1, voorlopige aanslag 2026",
+      "source_url": "https://www.belastingdienst.nl/wps/wcm/connect/nl/voorlopige-aanslag/content/voorlopige-aanslag-tarieven-en-heffingskortingen",
+      "oud_fragment": "boven de € 76.817 (2025). In dat geval wordt namelijk wel 49,50 procent inkomstenbelasting geheven over het meerdere inkomen, en is de hypot…",
+      "nieuw_fragment": "boven de € 78.426 (2026). In dat geval wordt namelijk wel 49,50 procent inkomstenbelasting geheven over het meerdere inkomen, en is de hypot…"
+    },
+    {
+      "book": "boek3.html",
+      "topic": "Overdrachtsbelasting — algemeen tarief en startersgrens",
+      "source": "SRA — overdrachtsbelasting 2026",
+      "source_url": "https://www.sra.nl/nieuws/259001/2026/01/overdrachtsbelasting-drie-tarieven-en-hogere-startersvrijstelling-in-2026",
+      "oud_fragment": "en 10,4 procent voor alle andere onroerende zaken, zoals vakantiewoningen, bedrijfspanden en bijvoorbeeld een garage bij het huis die pas ná…",
+      "nieuw_fragment": "en acht procent voor alle andere onroerende zaken, zoals vakantiewoningen, bedrijfspanden en bijvoorbeeld een garage bij het huis die pas ná…"
+    },
+    {
+      "book": "boek3.html",
+      "topic": "Overdrachtsbelasting — startersgrens",
+      "source": "Belastingdienst — startersvrijstelling overdrachtsbelasting",
+      "source_url": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/woning/overdrachtsbelasting/startersvrijstelling",
+      "oud_fragment": "koopprijs woning is maximaal € 525.000.",
+      "nieuw_fragment": "koopprijs woning is maximaal € 555.000 (2025: € 525.000)."
+    },
+    {
+      "book": "boek4.html",
+      "topic": "Overdrachtsbelasting — startersgrens (woningwaardegrens)",
+      "source": "Belastingdienst — startersvrijstelling overdrachtsbelasting",
+      "source_url": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/woning/overdrachtsbelasting/startersvrijstelling",
+      "oud_fragment": "De woningwaardegrens is geïndexeerd en is € 525.000 vanaf 2025.",
+      "nieuw_fragment": "De woningwaardegrens is geïndexeerd: € 525.000 in 2025, € 555.000 vanaf 2026."
+    },
+    {
+      "book": "boek4.html",
+      "topic": "Overdrachtsbelasting — algemeen tarief",
+      "source": "SRA — overdrachtsbelasting 2026",
+      "source_url": "https://www.sra.nl/nieuws/259001/2026/01/overdrachtsbelasting-drie-tarieven-en-hogere-startersvrijstelling-in-2026",
+      "oud_fragment": "Per 1 januari 2023 is de overdrachtsbelasting voor niet-eigen-woningen én niet-woningen verhoogd van acht naar 10,4 procent. Twee procent ge…",
+      "nieuw_fragment": "Van 1 januari 2023 tot en met 2025 was de overdrachtsbelasting voor niet-eigen-woningen én niet-woningen verhoogd naar 10,4 procent; per 1 j…"
+    },
+    {
+      "book": "boek4.html",
+      "topic": "Overdrachtsbelasting — startersgrens (2026)",
+      "source": "Belastingdienst — startersvrijstelling overdrachtsbelasting",
+      "source_url": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/woning/overdrachtsbelasting/startersvrijstelling",
+      "oud_fragment": "In 2025 is de grens voor de startersvrijstelling verhoogd naar een maximale aankoopprijs van de woning van € 525.000.",
+      "nieuw_fragment": "Per 2026 is de grens voor de startersvrijstelling € 555.000 (in 2025 was dat € 525.000)."
+    },
+    {
+      "book": "boek4.html",
+      "topic": "NHG-grens",
+      "source": "NHG-normering 2026 / Hypotheker.nl",
+      "source_url": "https://www.hypotheker.nl/actueel/nieuwsberichten/2025/nhg-grens-vastgesteld-voor-2026/",
+      "note": "De direct volgende zin over de extra hypotheekruimte voor alleenstaanden (€ 17.000, prijspeil 2025) is ongewijzigd gelaten: geen 2026-bronbevestiging gevonden.",
+      "oud_fragment": "De NHG-grens is verhoogd naar € 450.000.",
+      "nieuw_fragment": "De NHG-grens is in 2026 € 470.000 (met energiebesparende voorzieningen: € 498.200)."
+    }
+  ],
+  "not_updated": [
+    {
+      "topic": "Box 1 — AOW-overgangstarieven (geboren op/na 1946 en vóór 1946)",
+      "books": "boek1.html",
+      "reason": "Twee afzonderlijke tabellen met verlaagde/afwijkende schijf-1-tarieven voor AOW-gerechtigden (17,92% resp. grens € 40.502) zijn niet bijgewerkt: de gevonden 2026-bronnen bevestigen een vergelijkbaar maar niet exact overeenkomend cijfer (17,85% bij een grens van € 41.123) voor een net iets andere doelgroep-indeling, en het risico op een onjuiste 1-op-1 koppeling was te groot om hier zonder nadere verificatie door te voeren."
+    },
+    {
+      "topic": "Box 3 — heffingsvrij vermogen en forfaitaire rendementspercentages",
+      "books": "boek1.html, boek3.html",
+      "reason": "Het heffingsvrij vermogen (2025: € 57.684) stijgt naar € 59.357 (2026) en de meeste bronnen bevestigen dit, maar de forfaitaire percentages voor banktegoeden en schulden voor 2026 waren op het moment van bijwerken nog 'voorlopig' (definitieve vaststelling pas begin 2027 verwacht). Om geen cijfers te publiceren die nog kunnen wijzigen, is dit onderdeel geheel buiten deze ronde gehouden — zie belastingdienst.nl voor de actuele stand."
+    },
+    {
+      "topic": "AOW-leeftijd en pensioenrichtleeftijd",
+      "books": "boek2.html",
+      "reason": "De tabel in het boek (2025 t/m 2030, oplopend naar 67 jaar en 3 maanden) kwam bij controle al overeen met de huidige (2026) planning en is daarom ongewijzigd gelaten. De status van de RVU-regeling na 31 december 2025 is niet geverifieerd voor deze update."
+    },
+    {
+      "topic": "Mogelijke tegenstrijdigheid aftrektarief 'grondslagverminderende posten'",
+      "books": "boek1.html, boek4.html",
+      "reason": "Boek 1 noemt het basistarief voor deze aftrekpost 35,82 procent (schijf 1), boek 4 noemt in een vergelijkbare passage (het voorbeeld van 'Karel') 37,48 procent (schijf 2). Dit lijkt een inconsistentie in het bronmateriaal zelf. Omdat niet met zekerheid is vast te stellen welk percentage hier bedoeld is, zijn beide passages ongewijzigd gelaten — dit verdient navraag bij de NVHP."
+    },
+    {
+      "topic": "Doorgerekende (genoemde) voorbeelden",
+      "books": "alle vier boeken",
+      "reason": "Cijfers die onderdeel zijn van een voorbeeld met een naam (o.a. Hanneke, Abby, Patrick Smabers, Karel, Léon, Gerard en Nancy) zijn principieel niet aangepast: het wijzigen van één grensbedrag of tarief daarin vereist het herrekenen van de rest van dat voorbeeld, wat buiten de betrouwbaar te verifiëren reikwijdte van deze update valt."
+    },
+    {
+      "topic": "Overige jaartal- en cijfervermeldingen (‘(2025)’ e.d.)",
+      "books": "alle vier boeken",
+      "reason": "Deze update betreft een afgebakende set veelgebruikte, jaarlijks geïndexeerde kerncijfers (belastingschijven, heffingskortingen, box 2-grens, eigenwoningforfait, NHG-grens, overdrachtsbelasting, een deel van de schenkingsvrijstellingen). Er resteren nog diverse andere jaartal- en bedragvermeldingen (circa 400 in totaal) die niet individueel zijn gecontroleerd. Zie ook wijzigingen.html."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wijzigingen — NVHP Syllabus</title>
+<meta name="description" content="Transparant overzicht van alle inhoudelijke bijwerkingen die zijn doorgevoerd in de digitale NVHP-syllabus.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header no-print">
+  <div class="header-inner">
+    <a class="brand" href="index.html">NVHP · Leergang Hypothecaire Planning</a>
+  </div>
+</header>
+
+<div class="layout" style="grid-template-columns: 1fr;">
+  <main class="content" style="max-width: 900px; margin: 0 auto;">
+    <h1 class="book-title">Wijzigingenlog</h1>
+    <p class="book-subtitle">Transparant overzicht van bijwerkingen t.o.v. de gedrukte editie 2025</p>
+
+    <p class="copyright-note">
+      Deze syllabus is oorspronkelijk uitgegeven door de NVHP, <strong>bijgewerkt tot 1 maart 2025</strong>.
+      Op deze pagina staat precies welke cijfers sindsdien zijn bijgewerkt naar het niveau 2026, met bron, en
+      — minstens zo belangrijk — wat <em>niet</em> is bijgewerkt en waarom. Dit is geen door de NVHP
+      gecontroleerde of goedgekeurde update. Gebruik deze syllabus niet als enige bron voor een echt examen
+      zonder de genoemde bronnen zelf te controleren.
+    </p>
+
+    <section id="samenvatting">
+      <h2 style="color:var(--nvhp-navy)">Reikwijdte van deze update</h2>
+      <p>Er is uitsluitend gekeken naar een afgebakende set veelgebruikte, jaarlijks geïndexeerde kerncijfers:
+      belastingschijven box 1 en box 2, heffingskortingen, eigenwoningforfait, NHG-grenzen, overdrachtsbelasting
+      en een deel van de schenkingsvrijstellingen. Losse jaartalvermeldingen en cijfers binnen doorgerekende
+      (genoemde) voorbeelden zijn bewust niet aangepast — zie hieronder waarom.</p>
+    </section>
+
+    <section id="bijgewerkt">
+      <h2 style="color:var(--nvhp-navy)">Bijgewerkt naar 2026 (<span id="count-updated"></span>)</h2>
+      <div id="updates-list"></div>
+    </section>
+
+    <section id="niet-bijgewerkt">
+      <h2 style="color:var(--nvhp-navy)">Bewust niet bijgewerkt</h2>
+      <div id="not-updated-list"></div>
+    </section>
+  </main>
+</div>
+<footer class="site-footer no-print">
+  <p>© NVHP 2025 — Leergang Hypothecaire Planning · <a href="index.html">Alle boeken</a> · <a href="wijzigingen.html">Wijzigingenlog</a></p>
+</footer>
+
+<style>
+  .upd-card { border:1px solid var(--nvhp-border); border-radius:8px; padding:16px 20px; margin:14px 0; background:var(--nvhp-paper); }
+  .upd-topic { font-weight:600; color:var(--nvhp-navy); margin:0 0 6px; }
+  .upd-book { display:inline-block; background:var(--nvhp-bg); color:var(--nvhp-muted); font-size:.75rem; padding:2px 8px; border-radius:12px; margin-left:8px; }
+  .upd-diff { font-size:.86rem; margin:8px 0; }
+  .upd-old { color:#9a1c17; text-decoration:line-through; display:block; margin-bottom:4px; }
+  .upd-new { color:#1a7a3a; display:block; }
+  .upd-src { font-size:.8rem; color:var(--nvhp-muted); margin-top:8px; }
+  .upd-note { font-size:.8rem; color:var(--nvhp-muted); margin-top:6px; font-style:italic; }
+  .nu-card { border-left:3px solid var(--nvhp-red); padding:10px 16px; margin:12px 0; background:var(--nvhp-bg); border-radius:0 8px 8px 0; }
+  .nu-topic { font-weight:600; color:var(--nvhp-navy); }
+  .nu-books { font-size:.78rem; color:var(--nvhp-muted); }
+</style>
+
+<script>
+fetch('scripts/changelog_data.json').then(r => r.json()).then(data => {
+  document.getElementById('count-updated').textContent = data.updates.length;
+  const upd = document.getElementById('updates-list');
+  data.updates.forEach(u => {
+    const el = document.createElement('div');
+    el.className = 'upd-card';
+    el.innerHTML = `
+      <p class="upd-topic">${u.topic}<span class="upd-book">${u.book}</span></p>
+      <div class="upd-diff">
+        <span class="upd-old">${u.oud_fragment}</span>
+        <span class="upd-new">${u.nieuw_fragment}</span>
+      </div>
+      <p class="upd-src">Bron: ${u.source_url ? `<a href="${u.source_url}" target="_blank" rel="noopener">${u.source}</a>` : u.source}</p>
+      ${u.note ? `<p class="upd-note">${u.note}</p>` : ''}
+    `;
+    upd.appendChild(el);
+  });
+
+  const nu = document.getElementById('not-updated-list');
+  data.not_updated.forEach(n => {
+    const el = document.createElement('div');
+    el.className = 'nu-card';
+    el.innerHTML = `
+      <p class="nu-topic">${n.topic}</p>
+      <p class="nu-books">${n.books}</p>
+      <p>${n.reason}</p>
+    `;
+    nu.appendChild(el);
+  });
+
+  const stamp = document.createElement('p');
+  stamp.style.cssText = 'color:var(--nvhp-muted);font-size:.8rem;text-align:center;margin-top:32px;';
+  stamp.textContent = 'Laatst bijgewerkt: ' + data.applied_on;
+  document.querySelector('main.content').appendChild(stamp);
+}).catch(() => {
+  document.getElementById('updates-list').textContent = 'Kon wijzigingenlog niet laden.';
+});
+</script>
+</body>
+</html>
