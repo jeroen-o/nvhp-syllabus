@@ -21,22 +21,32 @@
 
   function loadIndex() {
     if (indexPromise) return indexPromise;
-    indexPromise = fetch("search-index.json")
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        index = data.map(function (e) {
-          return {
-            raw: e,
-            nt: normalize(e.t),
-            nx: normalize(e.x),
-          };
-        });
-        return index;
-      })
-      .catch(function () {
-        index = [];
-        return index;
+    var books = fetch("search-index.json").then(function (r) { return r.json(); }).catch(function () { return []; });
+    var mc = fetch("scripts/masterclasses_data.json").then(function (r) { return r.json(); }).catch(function () { return []; });
+    indexPromise = Promise.all([books, mc]).then(function (results) {
+      var bookEntries = results[0] || [];
+      var mcPayload = results[1] || [];
+      var mcEntries = (mcPayload.items || mcPayload).map(function (m) {
+        return {
+          b: "mc",
+          bt: m.type === "opleiding" ? "Opleiding" : "Masterclass",
+          url: m.url,
+          t: m.titel,
+          x: (m.omschrijving || "") + (m.prijs ? " (" + m.prijs + (m.punten ? ", PE " + m.punten : "") + ")" : ""),
+        };
       });
+      index = bookEntries.concat(mcEntries).map(function (e) {
+        return {
+          raw: e,
+          nt: normalize(e.t),
+          nx: normalize(e.x),
+        };
+      });
+      return index;
+    }).catch(function () {
+      index = [];
+      return index;
+    });
     return indexPromise;
   }
 
@@ -105,9 +115,13 @@
     var html = items.map(function (it, i) {
       var e = it.raw;
       var snippet = snippetAround(e.x, normalize(q));
+      var isMc = e.b === "mc";
+      var href = isMc ? e.url : BOOK_FILE[e.b] + "#" + e.a;
+      var extraAttrs = isMc ? ' target="_blank" rel="noopener"' : "";
+      var bookLabel = isMc ? escapeHtml(e.bt) : "Boek " + e.b + " — " + escapeHtml(e.bt);
       return (
-        '<a class="sr-item" data-idx="' + i + '" href="' + BOOK_FILE[e.b] + "#" + e.a + '">' +
-        '<div class="sr-book">Boek ' + e.b + " — " + escapeHtml(e.bt) + "</div>" +
+        '<a class="sr-item' + (isMc ? " sr-item-mc" : "") + '" data-idx="' + i + '" href="' + href + '"' + extraAttrs + '>' +
+        '<div class="sr-book">' + bookLabel + "</div>" +
         '<div class="sr-title">' + highlight(e.t, normalize(q)) + "</div>" +
         (snippet ? '<div class="sr-snippet">' + highlight(snippet, normalize(q)) + "</div>" : "") +
         "</a>"

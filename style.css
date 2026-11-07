@@ -143,6 +143,9 @@ a:hover { text-decoration: underline; }
 .sr-item:last-child { border-bottom: none; }
 .sr-item:hover, .sr-item.is-active { background: var(--nvhp-bg); text-decoration: none; }
 .sr-book { font-size: .72rem; font-weight: 700; color: var(--nvhp-red-dark); text-transform: uppercase; letter-spacing: .04em; }
+.sr-item-mc { background: #fff8f0; }
+.sr-item-mc .sr-book { color: var(--nvhp-navy); }
+.sr-item-mc:hover, .sr-item-mc.is-active { background: #fdeee0; }
 .sr-title { color: var(--nvhp-navy); font-weight: 600; font-size: .92rem; margin: 2px 0 3px; }
 .sr-snippet { color: var(--nvhp-muted); font-size: .8rem; line-height: 1.4; }
 .sr-snippet mark { background: #fde3a1; color: inherit; border-radius: 2px; }

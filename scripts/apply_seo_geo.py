@@ -80,6 +80,14 @@ PAGES = {
         "priority": "0.5",
         "changefreq": "monthly",
     },
+    "masterclasses.html": {
+        "path": "/masterclasses.html",
+        "title": "Masterclasses — NVHP Syllabus Hypothecaire Planning",
+        "description": "Overzicht van alle actuele NVHP-Masterclasses voor Erkend Hypothecair Planners: korte omschrijving, PE-punten en prijs per masterclass.",
+        "og_type": "website",
+        "priority": "0.6",
+        "changefreq": "weekly",
+    },
 }
 
 BOOK_META = {
@@ -184,6 +192,10 @@ def jsonld(fname, meta):
         graph.append({"@type": "WebPage", "name": meta["title"], "url": DOMAIN + "/wijzigingen.html",
                        "description": meta["description"]})
         graph.append(breadcrumb([("Alle boeken", "/"), ("Wijzigingenlog", "/wijzigingen.html")]))
+    elif fname == "masterclasses.html":
+        graph.append({"@type": "CollectionPage", "name": meta["title"], "url": DOMAIN + "/masterclasses.html",
+                       "description": meta["description"], "isPartOf": {"@type": "WebSite", "url": DOMAIN + "/"}})
+        graph.append(breadcrumb([("Alle boeken", "/"), ("Masterclasses", "/masterclasses.html")]))
     return {"@context": "https://schema.org", "@graph": graph}
 
 
@@ -279,6 +291,9 @@ def write_llms_txt():
 
 - [Bijlagen]({DOMAIN}/bijlagen.html): officiële NVHP-referentiedocumenten (NHG-normen,
   leennormen, Nibud-advies, gedragscode, AVG-materiaal, SVn-productvoorwaarden).
+- [Masterclasses]({DOMAIN}/masterclasses.html): actueel overzicht van NVHP-Masterclasses
+  (permanente educatie voor Erkend Hypothecair Planners), met omschrijving, PE-punten en
+  prijs per masterclass; wekelijks automatisch gecontroleerd op mc.hypothecairplanner.nl.
 - [Wijzigingenlog]({DOMAIN}/wijzigingen.html): transparant overzicht van kerncijfers die
   zijn bijgewerkt naar 2026 t.o.v. de gedrukte editie 2025, met bron per wijziging.
 
