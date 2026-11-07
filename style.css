@@ -231,22 +231,15 @@ a:hover { text-decoration: underline; }
 
 /* ---------- masterclass promo ---------- */
 .mc-promo {
-  background: var(--nvhp-bg);
-  border: 1px solid var(--nvhp-border);
-  padding: 16px 20px;
+  background: var(--nvhp-paper);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(20,24,39,.06), 0 6px 18px rgba(20,24,39,.08);
   margin: 0 0 32px;
 }
-.mc-promo-head {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px 10px;
-  margin-bottom: 6px;
-}
-.mc-promo-title {
-  font-weight: 700;
-  color: var(--nvhp-navy);
-  font-size: .98rem;
+.mc-promo-header {
+  background: var(--nvhp-navy);
+  padding: 13px 22px;
 }
 .mc-badge {
   display: inline-block;
@@ -254,31 +247,49 @@ a:hover { text-decoration: underline; }
   color: #fff;
   font-size: .68rem;
   font-weight: 700;
-  letter-spacing: .04em;
+  letter-spacing: .05em;
   text-transform: uppercase;
-  padding: 2px 8px;
+  padding: 3px 10px;
   border-radius: 20px;
   margin-right: 10px;
 }
+.mc-promo-title {
+  font-weight: 700;
+  color: #fff;
+  font-size: .95rem;
+}
+.mc-promo-body { padding: 20px 22px; }
 .mc-promo-intro {
   font-size: .88rem;
   color: var(--nvhp-text);
-  margin: 0 0 12px;
+  margin: 0 0 14px;
 }
 .mc-list {
   list-style: none;
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 6px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
-.mc-list li { font-size: .86rem; }
-.mc-list a { font-weight: 600; }
+.mc-list li { display: block; }
+.mc-list a {
+  display: inline-block;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--nvhp-navy);
+  background: var(--nvhp-bg);
+  border: 1px solid var(--nvhp-border);
+  border-radius: 20px;
+  padding: 7px 14px;
+}
+.mc-list a:hover { background: #fff; border-color: var(--nvhp-red); color: var(--nvhp-red-dark); text-decoration: none; }
 .mc-promo-foot {
-  font-size: .83rem;
+  font-size: .82rem;
   color: var(--nvhp-muted);
   margin: 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--nvhp-border);
 }
 .mc-promo-foot a { font-weight: 600; }
 
@@ -309,9 +320,8 @@ a:hover { text-decoration: underline; }
   font-size: .85rem;
   color: var(--nvhp-muted);
   background: var(--nvhp-bg);
-  border-radius: 8px;
   padding: 10px 16px;
-  margin: 0 0 24px;
+  margin: 0 0 16px;
 }
 .mc-inline-note a { font-weight: 600; }
 

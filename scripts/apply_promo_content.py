@@ -62,8 +62,9 @@ def promo_block(p):
     )
     return (
         '<div class="mc-promo no-print">\n'
-        '      <div class="mc-promo-head"><span class="mc-badge">PE / masterclasses</span>'
+        '      <div class="mc-promo-header"><span class="mc-badge">PE / masterclasses</span>'
         '<span class="mc-promo-title">Verdiep je kennis</span></div>\n'
+        '      <div class="mc-promo-body">\n'
         f'      <p class="mc-promo-intro">{p["intro"]}</p>\n'
         '      <ul class="mc-list">\n'
         f"{items_html}\n"
@@ -71,7 +72,10 @@ def promo_block(p):
         '      <p class="mc-promo-foot">Als lid van de NVHP volg je deze bij permanente educatie als Erkend '
         'Hypothecair Planner. <a href="https://mc.hypothecairplanner.nl/" target="_blank" rel="noopener">Bekijk '
         'het volledige aanbod</a> of <a href="https://www.hypothecairplanner.nl/adviseur/lidmaatschap/lid-worden" '
-        'target="_blank" rel="noopener">word lid</a>.</p>\n'
+        'target="_blank" rel="noopener">word lid</a>. Liever een gedrukt exemplaar van deze syllabus? Ook dat is, '
+        'net als de Wettenbundel, te bestellen bij de NVHP via het '
+        '<a href="https://www.hypothecairplanner.nl/portal/syllabi" target="_blank" rel="noopener">opleidingsportaal</a>.</p>\n'
+        "      </div>\n"
         "    </div>"
     )
 
@@ -141,9 +145,16 @@ def apply_inline_notes():
             '      Gedownload op <span id="fetch-date"></span>.\n    </p>',
             '\n\n    <p class="mc-inline-note no-print">Veel van deze bijlagen (zoals NHG-normen en '
             'leennormen) komen jaarlijks terug in de <a href="https://mc.hypothecairplanner.nl/" '
-            'target="_blank" rel="noopener">Masterclasses</a> van de NVHP.</p>',
+            'target="_blank" rel="noopener">Masterclasses</a> van de NVHP. De syllabus zelf is, net als de '
+            '<a href="https://www.hypothecairplanner.nl/adviseur/materialen/wettenbundel" target="_blank" '
+            'rel="noopener">Wettenbundel</a>, ook als gedrukt boek te bestellen bij de NVHP via het '
+            '<a href="https://www.hypothecairplanner.nl/portal/syllabi" target="_blank" rel="noopener">'
+            "opleidingsportaal</a>.</p>",
         ),
     }
+    # (bewust in één <p> samengevoegd: twee opeenvolgende .mc-inline-note-alinea's bleken elkaar
+    # te overlappen bij het renderen — een hardnekkige layoutfout die alleen verdween door ze
+    # samen te voegen tot één blok.)
     for fname, (anchor, addition) in notes.items():
         path = f"{REPO}/{fname}"
         with open(path, encoding="utf-8") as f:
@@ -158,7 +169,74 @@ def apply_inline_notes():
         print(f"{fname}: notitie toegevoegd")
 
 
+def apply_printed_edition_notes():
+    # 1) per-boek: zin toevoegen aan het bestaande mc-promo-foot
+    book_old_tail = (
+        '<a href="https://mc.hypothecairplanner.nl/" target="_blank" rel="noopener">Bekijk '
+        'het volledige aanbod</a> of <a href="https://www.hypothecairplanner.nl/adviseur/lidmaatschap/lid-worden" '
+        'target="_blank" rel="noopener">word lid</a>.</p>'
+    )
+    book_addition = (
+        ' Liever een gedrukt exemplaar van deze syllabus? Ook dat is, net als de Wettenbundel, te bestellen '
+        'bij de NVHP via het <a href="https://www.hypothecairplanner.nl/portal/syllabi" target="_blank" '
+        'rel="noopener">opleidingsportaal</a>.</p>'
+    )
+    for num in PROMOS:
+        path = f"{REPO}/boek{num}.html"
+        with open(path, encoding="utf-8") as f:
+            c = f.read()
+        if "portal/syllabi" in c:
+            print(f"boek{num}.html: bestel-notitie al aanwezig, overgeslagen")
+            continue
+        assert book_old_tail in c, f"boek{num}.html: anker (mc-promo-foot) niet gevonden"
+        c = c.replace(book_old_tail, book_old_tail[:-4] + book_addition, 1)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(c)
+        print(f"boek{num}.html: bestel-notitie toegevoegd")
+
+    # 2) index.html: eigen mc-promo-blok vóór de copyrighttekst
+    path = f"{REPO}/index.html"
+    with open(path, encoding="utf-8") as f:
+        c = f.read()
+    if "portal/syllabi" in c:
+        print("index.html: bestel-notitie al aanwezig, overgeslagen")
+    else:
+        anchor = '<p class="index-copyright">© Nederlandse Vereniging van Hypothecair Planners (NVHP), april 2025.'
+        assert anchor in c, "index.html: anker niet gevonden"
+        block = (
+            '<div class="mc-promo" style="max-width:1100px; margin:0 auto 32px;">\n'
+            '  <div class="mc-promo-header"><span class="mc-badge">Gedrukte editie</span>'
+            '<span class="mc-promo-title">Liever een fysiek boek?</span></div>\n'
+            '  <div class="mc-promo-body">\n'
+            '    <p class="mc-promo-intro">Net als de <a href="https://www.hypothecairplanner.nl/adviseur/materialen/wettenbundel" '
+            'target="_blank" rel="noopener">Wettenbundel Financiële Dienstverlening</a> is ook deze syllabus los '
+            "te bestellen bij de NVHP als gedrukt boek.</p>\n"
+            '    <p class="mc-promo-foot">Bestellen kan via het <a href="https://www.hypothecairplanner.nl/portal/syllabi" '
+            'target="_blank" rel="noopener">NVHP-opleidingsportaal (Syllabi)</a> — inlog met uw NVHP-account vereist — '
+            'of via de <a href="https://www.hypothecairplanner.nl/adviseur/materialen" target="_blank" rel="noopener">materialenpagina</a>. '
+            'Vragen? Mail <a href="mailto:info@hypothecairplanner.nl">info@hypothecairplanner.nl</a>.</p>\n'
+            "  </div>\n"
+            "</div>\n\n"
+        )
+        c = c.replace(anchor, block + anchor, 1)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(c)
+        print("index.html: bestel-notitie toegevoegd")
+
+    # 3) bijlagen.html: de bestel-zin zit al in de .mc-inline-note tekst die
+    # apply_inline_notes() genereert (bewust in hetzelfde <p> i.p.v. een
+    # tweede, losse alinea — zie de toelichting daar). Niets te doen hier.
+    path = f"{REPO}/bijlagen.html"
+    with open(path, encoding="utf-8") as f:
+        c = f.read()
+    if "portal/syllabi" in c:
+        print("bijlagen.html: bestel-notitie al aanwezig, overgeslagen")
+    else:
+        print("bijlagen.html: wordt mee opgenomen door apply_inline_notes()")
+
+
 if __name__ == "__main__":
     apply_book_promos()
     apply_index_promo()
     apply_inline_notes()
+    apply_printed_edition_notes()
