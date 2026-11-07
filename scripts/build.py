@@ -302,16 +302,18 @@ PAGE_TMPL = """<!doctype html>
     <button class="print-btn" onclick="window.open('{slug}.html','_blank').print()">Print dit boek</button>
   </div>
 </header>
+<section class="book-intro">
+  <h1 class="book-title">Boek {num} — {title}</h1>
+  <p class="book-subtitle">{subtitle}</p>
+  <p class="copyright-note">© Nederlandse Vereniging van Hypothecair Planners (NVHP), april 2025. Uitsluitend voor eigen studiegebruik binnen de Leergang Hypothecaire Planning.</p>
+</section>
 <div class="layout">
-  <aside class="sidebar no-print">
+  <aside class="sidebar">
     <a class="back-link" href="index.html">&larr; Alle boeken</a>
     <h1 class="book-label">Boek {num}<br>{title}</h1>
     {toc}
   </aside>
   <main class="content">
-    <h1 class="book-title">Boek {num} — {title}</h1>
-    <p class="book-subtitle">{subtitle}</p>
-    <p class="copyright-note">© Nederlandse Vereniging van Hypothecair Planners (NVHP), april 2025. Uitsluitend voor eigen studiegebruik binnen de Leergang Hypothecaire Planning.</p>
     {body}
   </main>
 </div>

@@ -84,6 +84,12 @@ a:hover { text-decoration: underline; }
   .content { order: 1; }
 }
 
+.book-intro {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 24px 0;
+}
+
 .sidebar {
   background: var(--nvhp-paper);
   border: 1px solid var(--nvhp-border);
@@ -249,12 +255,100 @@ a:hover { text-decoration: underline; }
 
 /* ---------- print ---------- */
 .no-print { display: initial; }
+
+@page {
+  size: A4;
+  margin: 22mm 18mm 20mm 18mm;
+  @top-left { content: "NVHP · Leergang Hypothecaire Planning"; font-size: 8pt; color: #5d6270; font-family: Roboto, Arial, sans-serif; }
+  @bottom-center { content: "Pagina " counter(page) " van " counter(pages); font-size: 8pt; color: #5d6270; font-family: Roboto, Arial, sans-serif; }
+}
+/* title/cover page carries no running header or page number */
+@page cover { @top-left { content: ""; } @bottom-center { content: ""; } }
+
 @media print {
   .no-print { display: none !important; }
-  body { background: #fff; }
-  .layout { grid-template-columns: 1fr; padding: 0; }
+  body { background: #fff; font-size: 10.5pt; }
+  a { color: var(--nvhp-text); text-decoration: none; }
+
+  /* stack: cover/TOC (sidebar) above the book content, full width */
+  .layout { display: block; grid-template-columns: 1fr; padding: 0; gap: 0; }
+
+  /* ---- cover page (book-title / subtitle / copyright block) ---- */
   .content { border: none; padding: 0; box-shadow: none; }
-  .content h2.deel { background: #fff; color: var(--nvhp-navy); border: 1px solid var(--nvhp-navy); page-break-before: always; }
-  .content h3.chapter { page-break-before: always; }
-  .content p { text-align: left; }
+  .book-intro {
+    page: cover;
+    page-break-after: always;
+    break-after: page;
+    max-width: none;
+    padding: 0;
+  }
+  .book-title {
+    margin-top: 32vh;
+    text-align: center;
+    font-size: 2.1rem;
+  }
+  .book-title::before {
+    content: "NEDERLANDSE VERENIGING VAN HYPOTHECAIR PLANNERS";
+    display: block;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    color: var(--nvhp-muted);
+    margin-bottom: 28px;
+  }
+  .book-subtitle { text-align: center; font-size: 1.05rem; }
+  .copyright-note {
+    max-width: 420px;
+    margin: 48px auto 0;
+    text-align: center;
+    border-left: none;
+    border-top: 3px solid var(--nvhp-red);
+    padding: 16px 0 0;
+    background: none;
+  }
+
+  /* ---- printed table of contents (reuses the on-screen sidebar) ---- */
+  .sidebar {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    border: none;
+    padding: 0;
+    page-break-after: always;
+    break-after: page;
+  }
+  .sidebar .back-link { display: none; }
+  .sidebar .book-label {
+    text-align: center;
+    font-size: 1.6rem;
+    border-bottom: none;
+    margin-bottom: 4px;
+  }
+  .sidebar .book-label::before { content: "Inhoudsopgave"; display: block; color: var(--nvhp-red); font-size: .85rem; font-weight: 700; letter-spacing: .08em; margin-bottom: 18px; }
+  .sidebar .toc { column-count: 1; }
+  .sidebar .toc a { color: var(--nvhp-text); }
+  /* Houd de gedrukte inhoudsopgave beknopt: tot op paragraafniveau (subparagrafen
+     blijven in de digitale inhoudsopgave en via de links in de hoofdtekst). */
+  .sidebar .toc-sub { display: none; }
+
+  /* ---- chapter content ---- */
+  .content h2.deel {
+    background: #fff;
+    color: var(--nvhp-navy);
+    border: none;
+    border-top: 3px solid var(--nvhp-navy);
+    border-bottom: 3px solid var(--nvhp-navy);
+    padding: 10px 0;
+    text-align: center;
+    page-break-before: always;
+    break-before: page;
+  }
+  .content h3.chapter {
+    page-break-before: always;
+    break-before: page;
+    padding-top: 6mm;
+  }
+  .content h2, .content h3, .content h4 { page-break-after: avoid; break-after: avoid; }
+  .content p { text-align: left; orphans: 3; widows: 3; }
+  .content p, .content h2, .content h3, .content h4 { break-inside: avoid-page; }
 }
