@@ -299,6 +299,18 @@ PAGE_TMPL = """<!doctype html>
 <header class="site-header no-print">
   <div class="header-inner">
     <a class="brand" href="index.html">NVHP · Leergang Hypothecaire Planning</a>
+    <nav class="header-nav" aria-label="Boeken en pagina's">
+      <a href="boek1.html">Boek 1</a>
+      <a href="boek2.html">Boek 2</a>
+      <a href="boek3.html">Boek 3</a>
+      <a href="boek4.html">Boek 4</a>
+      <a href="bijlagen.html">Bijlagen</a>
+      <a href="wijzigingen.html">Wijzigingen</a>
+    </nav>
+    <div class="header-search">
+      <input type="search" id="site-search" placeholder="Zoek in alle boeken…" autocomplete="off" aria-label="Zoek in alle boeken">
+      <div id="search-results" class="search-results" hidden></div>
+    </div>
     <button class="print-btn" onclick="window.open('{slug}.html','_blank').print()">Print dit boek</button>
   </div>
 </header>
@@ -320,8 +332,9 @@ PAGE_TMPL = """<!doctype html>
 <footer class="site-footer no-print">
   <p>© NVHP 2025 — Leergang Hypothecaire Planning · Artikelnummer NVHP-SYLL202503/{num} · <a href="wijzigingen.html">Wijzigingenlog</a></p>
   <p class="footer-contact">Nederlandse Vereniging van Hypothecair Planners · De Wel 14-16, 3871 MV Hoevelaken · 033 - 254 20 12 · <a href="mailto:info@hypothecairplanner.nl">info@hypothecairplanner.nl</a> · <a href="https://www.hypothecairplanner.nl" target="_blank" rel="noopener">hypothecairplanner.nl</a></p>
-  <p style="font-size:.75rem;opacity:.7;margin-top:4px;">Let op: dit bestand wordt gegenereerd uit de brontekst. Na een rebuild moet scripts/apply_2026_updates.py opnieuw worden gedraaid om de 2026-cijferupdates opnieuw toe te passen — zie wijzigingen.html.</p>
+  <p style="font-size:.75rem;opacity:.7;margin-top:4px;">Let op: dit bestand wordt gegenereerd uit de brontekst. Na een rebuild moeten scripts/apply_2026_updates(_part2).py en scripts/build_search_index.py opnieuw worden gedraaid — zie wijzigingen.html.</p>
 </footer>
+<script src="search.js" defer></script>
 </body>
 </html>
 """
