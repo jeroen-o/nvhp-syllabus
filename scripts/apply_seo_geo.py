@@ -88,6 +88,14 @@ PAGES = {
         "priority": "0.6",
         "changefreq": "daily",
     },
+    "opleiding.html": {
+        "path": "/opleiding.html",
+        "title": "Opleiding Hypothecair Planner — wat levert het op?",
+        "description": "Wat de Leergang Hypothecaire Planning (opleiding tot Erkend Hypothecair Planner) u en uw klant oplevert: inhoud, instapeisen, examen en waar u de opleiding kunt volgen.",
+        "og_type": "website",
+        "priority": "0.7",
+        "changefreq": "monthly",
+    },
 }
 
 BOOK_META = {
@@ -196,6 +204,12 @@ def jsonld(fname, meta):
         graph.append({"@type": "CollectionPage", "name": meta["title"], "url": DOMAIN + "/masterclasses.html",
                        "description": meta["description"], "isPartOf": {"@type": "WebSite", "url": DOMAIN + "/"}})
         graph.append(breadcrumb([("Alle boeken", "/"), ("Masterclasses", "/masterclasses.html")]))
+    elif fname == "opleiding.html":
+        graph.append({"@type": "Course", "name": "Leergang Hypothecaire Planning",
+                       "description": "HBO-niveau verdiepingsopleiding tot Erkend Hypothecair Planner (EHP), voor hypotheekadviseurs met het Wft-diploma Hypothecair Krediet.",
+                       "provider": org_entity(), "url": DOMAIN + "/opleiding.html",
+                       "educationalCredentialAwarded": "Erkend Hypothecair Planner (EHP)"})
+        graph.append(breadcrumb([("Alle boeken", "/"), ("Opleiding Hypothecair Planner", "/opleiding.html")]))
     return {"@context": "https://schema.org", "@graph": graph}
 
 
@@ -291,6 +305,10 @@ def write_llms_txt():
 
 - [Bijlagen]({DOMAIN}/bijlagen.html): officiële NVHP-referentiedocumenten (NHG-normen,
   leennormen, Nibud-advies, gedragscode, AVG-materiaal, SVn-productvoorwaarden).
+- [Opleiding Hypothecair Planner]({DOMAIN}/opleiding.html): wat de Leergang Hypothecaire
+  Planning (de opleiding tot Erkend Hypothecair Planner) een adviseur en diens klant oplevert,
+  instapeisen, examen, en een overzicht van de opleidingsinstituten (DFO, Lindenhaeghe, Impact)
+  met prijs en inhoud; maandelijks automatisch gecontroleerd.
 - [Masterclasses]({DOMAIN}/masterclasses.html): actueel overzicht van NVHP-Masterclasses
   (permanente educatie voor Erkend Hypothecair Planners), met omschrijving, PE-punten en
   prijs per masterclass; dagelijks automatisch gecontroleerd op mc.hypothecairplanner.nl.

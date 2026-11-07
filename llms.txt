@@ -23,6 +23,10 @@
 
 - [Bijlagen](https://nvhp-syllabus.nl/bijlagen.html): officiële NVHP-referentiedocumenten (NHG-normen,
   leennormen, Nibud-advies, gedragscode, AVG-materiaal, SVn-productvoorwaarden).
+- [Opleiding Hypothecair Planner](https://nvhp-syllabus.nl/opleiding.html): wat de Leergang Hypothecaire
+  Planning (de opleiding tot Erkend Hypothecair Planner) een adviseur en diens klant oplevert,
+  instapeisen, examen, en een overzicht van de opleidingsinstituten (DFO, Lindenhaeghe, Impact)
+  met prijs en inhoud; maandelijks automatisch gecontroleerd.
 - [Masterclasses](https://nvhp-syllabus.nl/masterclasses.html): actueel overzicht van NVHP-Masterclasses
   (permanente educatie voor Erkend Hypothecair Planners), met omschrijving, PE-punten en
   prijs per masterclass; dagelijks automatisch gecontroleerd op mc.hypothecairplanner.nl.
