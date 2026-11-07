@@ -19,6 +19,7 @@ import re
 import subprocess
 import sys
 import time
+from datetime import date, datetime, timezone
 
 REPO = "/home/user/nvhp-syllabus"
 BASE = "https://mc.hypothecairplanner.nl"
@@ -26,6 +27,16 @@ CATALOG_KEY = '"1AC6ED44F7B0484DA39F894C0371BEA5"'
 OUT_PATH = f"{REPO}/scripts/masterclasses_data.json"
 
 SKIP_SLUGS = {"3-daagse-leergang-financieel-relatie-adviseur"}  # meerdaagse opleiding, geen masterclass
+
+# Voor een enkele cursuspagina staat er geen bruikbare omschrijving in het
+# standaard contentblok (bv. alleen een docentbio). Handmatige, beknopte
+# aanvulling i.p.v. een lege/onbruikbare omschrijving op de site.
+MANUAL_DESCRIPTIONS = {
+    "senioren-en-overwaarde": (
+        "Adviseren over overwaarde en wonen voor de oudere klant: "
+        "financiële mogelijkheden en aandachtspunten bij senioren in beeld."
+    ),
+}
 
 
 def fetch(url, timeout=25):
@@ -95,19 +106,22 @@ JUNK_PATTERNS = re.compile(
 
 
 def extract_description(page_html, title):
-    # strip script/style blokken eerst
-    cleaned = re.sub(r"<script.*?</script>", " ", page_html, flags=re.S)
+    # strip head (title/meta leveren geen bruikbare contenttekst), script/style
+    cleaned = re.sub(r"<head.*?</head>", " ", page_html, flags=re.S)
+    cleaned = re.sub(r"<script.*?</script>", " ", cleaned, flags=re.S)
     cleaned = re.sub(r"<style.*?</style>", " ", cleaned, flags=re.S)
 
-    # knip het content-gedeelte: zoek het eerste "Doel:" na de titel, en
-    # begrens het zoekgebied zodat we niet per ongeluk in latere, niet-
-    # gerelateerde pagina-secties (docentbio, javascript-waarschuwing, footer)
-    # terechtkomen.
-    doel_idx = cleaned.find("Doel:")
-    if doel_idx != -1:
-        search_region = cleaned[doel_idx : doel_idx + 3500]
+    # de hoofdomschrijving van een cursus staat steevast in het eerste
+    # content-blok van het type "content freehtml" (zowel met als zonder
+    # een "Doel:"-kopje) — dat is een veel betrouwbaarder anker dan zoeken
+    # naar het woord "Doel:" zelf, en voorkomt dat we in latere,
+    # niet-gerelateerde pagina-secties (docentbio, footer) belanden.
+    block_idx = cleaned.find('class="content freehtml"')
+    if block_idx != -1:
+        search_region = cleaned[block_idx : block_idx + 3500]
     else:
-        search_region = cleaned
+        doel_idx = cleaned.find("Doel:")
+        search_region = cleaned[doel_idx : doel_idx + 3500] if doel_idx != -1 else cleaned
 
     # pak de paragraaf-achtige tekstblokken (tussen tags) in dat gebied
     chunks = re.split(r"<(?:p|div|li)[^>]*>", search_region)
@@ -165,8 +179,12 @@ def main():
         if page_html:
             omschrijving = extract_description(page_html, row["titel"])
         if not omschrijving:
-            print(f"  WAARSCHUWING: geen omschrijving gevonden voor {slug}", file=sys.stderr)
-            omschrijving = ""
+            if slug in MANUAL_DESCRIPTIONS:
+                omschrijving = MANUAL_DESCRIPTIONS[slug]
+                print(f"  (handmatige omschrijving gebruikt voor {slug})")
+            else:
+                print(f"  WAARSCHUWING: geen omschrijving gevonden voor {slug}", file=sys.stderr)
+                omschrijving = ""
 
         titel = re.sub(r"\s+", " ", row["titel"]).strip()
         results.append({
@@ -180,13 +198,20 @@ def main():
         })
         time.sleep(0.4)
 
+    payload = {
+        "updated_on": date.today().isoformat(),
+        "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "source": f"{BASE}/",
+        "items": results,
+    }
     with open(OUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(results, f, ensure_ascii=False, indent=2)
+        json.dump(payload, f, ensure_ascii=False, indent=2)
 
     n_ok = sum(1 for r in results if r["omschrijving"])
     n_missing = len(results) - n_ok
     print(f"\nKlaar: {len(results)} items weggeschreven naar {OUT_PATH}")
     print(f"  {n_ok} met omschrijving, {n_missing} zonder (zie waarschuwingen hierboven).")
+    return payload
 
 
 if __name__ == "__main__":

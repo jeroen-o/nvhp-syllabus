@@ -334,21 +334,34 @@ a:hover { text-decoration: underline; }
   margin: 0 0 16px;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-direction: column;
+  gap: 10px;
 }
-.mc-list li { display: block; }
+.mc-list li {
+  border-left: 3px solid var(--nvhp-red);
+  padding: 2px 0 2px 14px;
+}
 .mc-list a {
   display: inline-block;
-  font-size: .82rem;
+  font-size: .88rem;
   font-weight: 600;
   color: var(--nvhp-navy);
-  background: var(--nvhp-bg);
-  border: 1px solid var(--nvhp-border);
-  border-radius: 20px;
-  padding: 7px 14px;
 }
-.mc-list a:hover { background: #fff; border-color: var(--nvhp-red); color: var(--nvhp-red-dark); text-decoration: none; }
+.mc-list a:hover { color: var(--nvhp-red-dark); text-decoration: none; }
+.mc-list-desc {
+  display: block;
+  font-size: .81rem;
+  color: var(--nvhp-muted);
+  margin-top: 2px;
+  line-height: 1.45;
+}
+.mc-list-meta {
+  display: inline-block;
+  font-size: .72rem;
+  color: var(--nvhp-muted);
+  font-weight: 600;
+  margin-left: 8px;
+}
 .mc-promo-foot {
   font-size: .88rem;
   color: var(--nvhp-muted);
