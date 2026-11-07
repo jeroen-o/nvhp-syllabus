@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 :root {
+  color-scheme: light;
   --nvhp-navy: #234765;
   --nvhp-navy-light: #2e5878;
   --nvhp-navy-dark: #1c3951;
@@ -57,9 +58,14 @@ a:hover { text-decoration: underline; }
   font-weight: 700;
   font-size: 1.05rem;
   letter-spacing: .01em;
-  white-space: nowrap;
   order: 1;
-  flex: 0 0 auto;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.brand-text { white-space: normal; }
+@media (min-width: 560px) {
+  .brand { flex: 0 0 auto; }
+  .brand-text { white-space: nowrap; }
 }
 .brand:hover { text-decoration: none; opacity: .88; }
 .brand-logo { height: 34px; width: auto; display: block; }
@@ -70,21 +76,9 @@ a:hover { text-decoration: underline; }
   flex-wrap: wrap;
   align-items: center;
   gap: 2px;
-  order: 3;
-  flex: 1 1 100%;
-  padding-top: 10px;
-  margin-top: 4px;
-  border-top: 1px solid rgba(255,255,255,.14);
-}
-@media (min-width: 980px) {
-  .header-nav {
-    order: 2;
-    flex: 0 1 auto;
-    padding-top: 0;
-    margin-top: 0;
-    border-top: none;
-    margin-left: 8px;
-  }
+  order: 2;
+  flex: 1 1 auto;
+  margin-left: 8px;
 }
 .header-nav a {
   color: #e9edf3;
@@ -99,16 +93,17 @@ a:hover { text-decoration: underline; }
 
 .header-search {
   position: relative;
-  order: 2;
-  flex: 1 1 240px;
-  max-width: 360px;
-  margin-left: auto;
-}
-@media (min-width: 980px) {
-  .header-search { order: 3; flex: 0 1 300px; margin-left: 12px; }
+  order: 3;
+  flex: 1 1 100%;
+  max-width: none;
+  margin-left: 0;
+  padding-top: 10px;
+  margin-top: 2px;
+  border-top: 1px solid rgba(255,255,255,.14);
 }
 .header-search input[type="search"] {
   width: 100%;
+  max-width: 420px;
   background: rgba(255,255,255,.14);
   border: 1px solid rgba(255,255,255,.3);
   color: #fff;
@@ -128,7 +123,8 @@ a:hover { text-decoration: underline; }
   position: absolute;
   top: calc(100% + 6px);
   left: 0;
-  right: 0;
+  width: 100%;
+  max-width: 420px;
   background: var(--nvhp-paper);
   color: var(--nvhp-text);
   border: 1px solid var(--nvhp-border);
@@ -581,8 +577,6 @@ a:hover { text-decoration: underline; }
 }
 
 /* ---------- print ---------- */
-.no-print { display: initial; }
-
 @page {
   size: A4;
   margin: 22mm 18mm 20mm 18mm;
