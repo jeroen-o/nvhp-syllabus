@@ -86,7 +86,7 @@ PAGES = {
         "description": "Overzicht van alle actuele NVHP-Masterclasses voor Erkend Hypothecair Planners: korte omschrijving, PE-punten en prijs per masterclass.",
         "og_type": "website",
         "priority": "0.6",
-        "changefreq": "weekly",
+        "changefreq": "daily",
     },
 }
 
@@ -293,7 +293,7 @@ def write_llms_txt():
   leennormen, Nibud-advies, gedragscode, AVG-materiaal, SVn-productvoorwaarden).
 - [Masterclasses]({DOMAIN}/masterclasses.html): actueel overzicht van NVHP-Masterclasses
   (permanente educatie voor Erkend Hypothecair Planners), met omschrijving, PE-punten en
-  prijs per masterclass; wekelijks automatisch gecontroleerd op mc.hypothecairplanner.nl.
+  prijs per masterclass; dagelijks automatisch gecontroleerd op mc.hypothecairplanner.nl.
 - [Wijzigingenlog]({DOMAIN}/wijzigingen.html): transparant overzicht van kerncijfers die
   zijn bijgewerkt naar 2026 t.o.v. de gedrukte editie 2025, met bron per wijziging.
 

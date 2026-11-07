@@ -3,7 +3,7 @@
 Verrijkt de bestaande masterclass-links in de mc-list-blokken per boek
 (boek1-4.html) met een korte omschrijving + prijs/PE-punten, op basis van
 scripts/masterclasses_data.json (door scripts/fetch_masterclasses.py
-wekelijks bijgewerkt). Matcht op slug (laatste deel van de cursus-URL).
+dagelijks bijgewerkt). Matcht op slug (laatste deel van de cursus-URL).
 
 Idempotent: als een <li> al een .mc-list-desc bevat, wordt die eerst
 verwijderd en opnieuw opgebouwd (zodat een woordelijke update van de

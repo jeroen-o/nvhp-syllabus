@@ -15,7 +15,7 @@ Idempotent: vervangt alles tussen de MARKER-commentaren.
 
 Run: python3 scripts/apply_mc_static.py
 (Hoort te draaien na scripts/fetch_masterclasses.py, dus ook onderdeel
-van de wekelijkse update.)
+van de dagelijkse update.)
 """
 import json
 import re

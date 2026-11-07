@@ -25,7 +25,7 @@
   leennormen, Nibud-advies, gedragscode, AVG-materiaal, SVn-productvoorwaarden).
 - [Masterclasses](https://nvhp-syllabus.nl/masterclasses.html): actueel overzicht van NVHP-Masterclasses
   (permanente educatie voor Erkend Hypothecair Planners), met omschrijving, PE-punten en
-  prijs per masterclass; wekelijks automatisch gecontroleerd op mc.hypothecairplanner.nl.
+  prijs per masterclass; dagelijks automatisch gecontroleerd op mc.hypothecairplanner.nl.
 - [Wijzigingenlog](https://nvhp-syllabus.nl/wijzigingen.html): transparant overzicht van kerncijfers die
   zijn bijgewerkt naar 2026 t.o.v. de gedrukte editie 2025, met bron per wijziging.
 

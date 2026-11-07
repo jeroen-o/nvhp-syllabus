@@ -7,9 +7,9 @@ prijs en PE-puntencode weg naar scripts/masterclasses_data.json.
 
 Alle gebruikte content is publiek (geen login vereist).
 
-Bedoeld om herhaaldelijk (bijv. wekelijks) gedraaid te worden zodat de
+Bedoeld om herhaaldelijk (bijv. dagelijks) gedraaid te worden zodat de
 masterclass-content op de site actueel blijft — zie scripts/check_masterclasses.py
-voor de wekelijkse controle die dit script aanroept en een rapport maakt.
+voor de dagelijkse controle die dit script aanroept en een rapport maakt.
 
 Run: python3 scripts/fetch_masterclasses.py
 """
