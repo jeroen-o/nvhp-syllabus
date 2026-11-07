@@ -286,6 +286,142 @@
       "note": "De direct volgende zin over de extra hypotheekruimte voor alleenstaanden (€ 17.000, prijspeil 2025) is ongewijzigd gelaten: geen 2026-bronbevestiging gevonden.",
       "oud_fragment": "De NHG-grens is verhoogd naar € 450.000.",
       "nieuw_fragment": "De NHG-grens is in 2026 € 470.000 (met energiebesparende voorzieningen: € 498.200)."
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Box 3 — heffingsvrij vermogen (definitie)",
+      "source": "SRA / FiscAlert — box 3 percentages, vrijstellingen en bedragen 2026",
+      "source_url": "https://www.sra.nl/nieuws/259001/2026/01/box-3-percentages-vrijstellingen-en-bedragen-2026",
+      "note": "De forfaitaire rendementspercentages zelf blijven buiten deze update — zie wijzigingen.html.",
+      "oud_fragment": "Het heffingsvrijvermogen bedraagt in 2025 € 57.684 per belastingplichtige. Het is het vermogen, waarover de belastingplichtige geen box 3-he…",
+      "nieuw_fragment": "Het heffingsvrijvermogen bedraagt in 2026 € 59.357 per belastingplichtige. Het is het vermogen, waarover de belastingplichtige geen box 3-he…"
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Box 3 — heffingsvrij vermogen (verwijzing in casus vruchtgebruik/bloot eigendom)",
+      "source": "SRA / FiscAlert — box 3 percentages, vrijstellingen en bedragen 2026",
+      "source_url": "https://www.sra.nl/nieuws/259001/2026/01/box-3-percentages-vrijstellingen-en-bedragen-2026",
+      "note": "Alleen deze losstaande verwijzing is bijgewerkt; de rest van die casus (bloot eigendom € 450.000 -/- € 144.000 = € 306.000) staat hier los van en is ongewijzigd.",
+      "oud_fragment": "het heffingsvrijvermogen in box 3 van € 57.684 (2025).",
+      "nieuw_fragment": "het heffingsvrijvermogen in box 3 van € 59.357 (2026)."
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Arbeidskorting — afbouwgrenzen (toelichtende zin)",
+      "source": "Rendement.nl — arbeidskorting 2026",
+      "source_url": "https://www.rendement.nl/aangifte-loonheffingen/nieuws/arbeidskorting-stijgt-opnieuw-licht-in-2026.html",
+      "note": "De gedetailleerde opbouwtabel direct hieronder (met knikpunten en percentages per schijf, o.a. 8,053% en 30,030%) is NIET bijgewerkt: hiervoor is geen complete, geverifieerde 2026-tabel gevonden. Zie wijzigingen.html.",
+      "oud_fragment": "De afbouw van de arbeidskorting begint bij een arbeidsinkomen van € 43.071. De afbouw eindigt bij een arbeidsinkomen van € 129.078.",
+      "nieuw_fragment": "De afbouw van de arbeidskorting begint bij een arbeidsinkomen van € 45.592. De afbouw eindigt bij een arbeidsinkomen van € 132.920."
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Ouderenkorting — tabel",
+      "source": "Rijksoverheid — ouderenkorting 2026",
+      "source_url": "https://www.rijksoverheid.nl/themas/werk/pensioen/vraag-en-antwoord/inkomstenbelasting/wat-is-een-heffingskorting-en-welke-heffingskortingen-zijn-er",
+      "note": "Voetnootcijfer '120' (PDF-extractieartefact) bij deze gelegenheid verwijderd.",
+      "oud_fragment": "Ouderenkorting tot inkomen van € 44.770               n.v.t.                   € 2.035120",
+      "nieuw_fragment": "Ouderenkorting tot inkomen van € 46.002               n.v.t.                   € 2.067"
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Alleenstaande ouderenkorting — tabel",
+      "source": "Rijksoverheid / Onderneming.nl — alleenstaande ouderenkorting 2026",
+      "source_url": "https://www.onderneming.nl/belasting/inkomstenbelasting/ouderenkorting/",
+      "note": "Voetnootcijfer '121' (PDF-extractieartefact) bij deze gelegenheid verwijderd.",
+      "oud_fragment": "Alleenstaande ouderenkorting                                                   € 531121",
+      "nieuw_fragment": "Alleenstaande ouderenkorting                                                   € 540"
+    },
+    {
+      "book": "boek1.html",
+      "topic": "Alleenstaande ouderenkorting — toelichtende zin",
+      "source": "Rijksoverheid / Onderneming.nl — alleenstaande ouderenkorting 2026",
+      "source_url": "https://www.onderneming.nl/belasting/inkomstenbelasting/ouderenkorting/",
+      "oud_fragment": "De alleenstaande ouderenkorting bedraagt € 531.",
+      "nieuw_fragment": "De alleenstaande ouderenkorting bedraagt € 540."
+    },
+    {
+      "book": "boek2.html",
+      "topic": "Schenkbelasting — vrijstellingstabel (eenmalig en studie)",
+      "source": "SRA / jongbloed-fiscaaljuristen — schenkingsvrijstellingen 2026",
+      "source_url": "https://www.sra.nl/nieuws/259001/2026/01/wat-mag-u-in-2026-belastingvrij-schenken",
+      "note": "Deze twee bedragen stonden na de eerste update nog op prijspeil 2025 (asterisk '*'); inmiddels wel bevestigd en bijgewerkt.",
+      "oud_fragment": "Vrijstellingsbedragen schenkbelasting﻿ Kinderen jaarlijks                                                  €   6.908 Kinderen 18 - 40 jaar (…",
+      "nieuw_fragment": "Vrijstellingsbedragen schenkbelasting﻿ Kinderen jaarlijks                                                  €   6.908 Kinderen 18 - 40 jaar (…"
+    },
+    {
+      "book": "boek2.html",
+      "topic": "Schenking/erfgenaam — schijfgrens overige verkrijgers",
+      "source": "Belastingdienst / Rendement — tarieven erf- en schenkbelasting 2026",
+      "source_url": "https://www.rendement.nl/erfbelasting-en-schenkbelasting/tools/berekening-erfbelasting-en-schenkbelasting.html",
+      "oud_fragment": "De schenkingsvrijstelling is dan anno 2026 € 2.769 en het tarief tot € 154.197 (bedrag 2025, nog niet herbevestigd voor 2026) 30 procent en …",
+      "nieuw_fragment": "De schenkingsvrijstelling is dan anno 2026 € 2.769 en het tarief tot € 158.669 30 procent en erboven 40 procent."
+    },
+    {
+      "book": "boek2.html",
+      "topic": "Erfbelasting — partnervrijstelling en schijfgrens (ongehuwd samenwonenden)",
+      "source": "Belastingdienst / Rendement — tarieven erf- en schenkbelasting 2026",
+      "source_url": "https://www.rendement.nl/erfbelasting-en-schenkbelasting/tools/berekening-erfbelasting-en-schenkbelasting.html",
+      "oud_fragment": "de hoge partnervrijstelling van € 804.698, het tarief van 10 procent tot € 154.197 aan verkrijging en 20 procent voor zover de verkrijging m…",
+      "nieuw_fragment": "de hoge partnervrijstelling van € 828.035, het tarief van 10 procent tot € 158.669 aan verkrijging en 20 procent voor zover de verkrijging m…"
+    },
+    {
+      "book": "boek2.html",
+      "topic": "Erfbelasting — tariefgroepentabel (schijfgrens)",
+      "source": "Belastingdienst / Rendement — tarieven erf- en schenkbelasting 2026",
+      "source_url": "https://www.rendement.nl/erfbelasting-en-schenkbelasting/tools/berekening-erfbelasting-en-schenkbelasting.html",
+      "oud_fragment": "€ 0 - € 154.197          10%                        18%                    30% ≥ € 154.197              20%                        36%      …",
+      "nieuw_fragment": "€ 0 - € 158.669          10%                        18%                    30% ≥ € 158.669              20%                        36%      …"
+    },
+    {
+      "book": "boek2.html",
+      "topic": "Rekenvoorbeeld (anoniem) — erfbelasting kind, € 50.000",
+      "source": "Belastingdienst — vrijstellingen erfbelasting 2026 (herrekend)",
+      "source_url": "https://bankinggeek.com/?p=32279",
+      "note": "Dit is een anoniem (niet aan een naam gekoppeld) rekenvoorbeeld; de uitkomst is herrekend met de 2026-vrijstelling van € 26.230. Geen afronding nodig: € 2.377,00 is exact.",
+      "oud_fragment": "Een kind erft een bedrag van € 50.000. In 2025 is het kind € 2.451 aan erfbelasting verschuldigd (er is geen onderscheid naar leeftijd). Ber…",
+      "nieuw_fragment": "Een kind erft een bedrag van € 50.000. In 2026 is het kind € 2.377 aan erfbelasting verschuldigd (er is geen onderscheid naar leeftijd). Ber…"
+    },
+    {
+      "book": "boek2.html",
+      "topic": "Rekenvoorbeeld (anoniem) — erfbelasting kind, € 300.000",
+      "source": "Belastingdienst — vrijstellingen en tarieven erfbelasting 2026 (herrekend)",
+      "source_url": "https://bankinggeek.com/?p=32279",
+      "note": "Anoniem rekenvoorbeeld, herrekend met de 2026-vrijstelling (€ 26.230) en schijfgrens (€ 158.669). Totaal afgerond op hele euro's, net als in het origineel.",
+      "oud_fragment": "Een kind erft een bedrag van € 300.000. In 2025 is het kind € 39.482 aan erfbelasting verschuldigd. Er is geen onderscheid naar leeftijd. Be…",
+      "nieuw_fragment": "Een kind erft een bedrag van € 300.000. In 2026 is het kind € 38.887 aan erfbelasting verschuldigd. Er is geen onderscheid naar leeftijd. Be…"
+    },
+    {
+      "book": "boek4.html",
+      "topic": "Schenking eigen woning — hoge vrijstelling",
+      "source": "SRA — schenkingsvrijstellingen 2026",
+      "source_url": "https://www.sra.nl/nieuws/259001/2026/01/wat-mag-u-in-2026-belastingvrij-schenken",
+      "oud_fragment": "In 2025 is de hoge schenking ten behoeve van de eigen woning maximaal € 32.195.",
+      "nieuw_fragment": "In 2026 is de hoge schenking ten behoeve van de eigen woning maximaal € 33.129."
+    },
+    {
+      "book": "boek4.html",
+      "topic": "Schenkingsvrijstelling — jaarlijks en eenmalig (18-40 jaar)",
+      "source": "SRA — schenkingsvrijstellingen 2026",
+      "source_url": "https://www.sra.nl/nieuws/259001/2026/01/wat-mag-u-in-2026-belastingvrij-schenken",
+      "oud_fragment": "Ouders mogen in 2025 hun kind jaarlijks maximaal € 6.713 belastingvrij schenken. Dit bedrag geldt voor de ouders samen. Kinderen in de leeft…",
+      "nieuw_fragment": "Ouders mogen in 2026 hun kind jaarlijks maximaal € 6.908 belastingvrij schenken. Dit bedrag geldt voor de ouders samen. Kinderen in de leeft…"
+    },
+    {
+      "book": "boek4.html",
+      "topic": "Schenkingsvrijstelling — jaarlijks en eenmalig (variant)",
+      "source": "SRA — schenkingsvrijstellingen 2026",
+      "source_url": "https://www.sra.nl/nieuws/259001/2026/01/wat-mag-u-in-2026-belastingvrij-schenken",
+      "oud_fragment": "In 2025 mogen ouders hun kind € 6.713 belastingvrij schenken. Bovendien mogen zij hun kind tussen de 18 en 40 jaar eenmalig een belastingvri…",
+      "nieuw_fragment": "In 2026 mogen ouders hun kind € 6.908 belastingvrij schenken. Bovendien mogen zij hun kind tussen de 18 en 40 jaar eenmalig een belastingvri…"
+    },
+    {
+      "book": "boek4.html",
+      "topic": "Schenkingsvrijstelling — dure studie",
+      "source": "SRA / jongbloed-fiscaaljuristen — schenkingsvrijstellingen 2026",
+      "source_url": "https://www.sra.nl/nieuws/259001/2026/01/wat-mag-u-in-2026-belastingvrij-schenken",
+      "oud_fragment": "wordt de verhoogde vrijstelling verder verhoogd naar € 67.064.",
+      "nieuw_fragment": "wordt de verhoogde vrijstelling verder verhoogd naar € 69.009."
     }
   ],
   "not_updated": [
@@ -318,6 +454,31 @@
       "topic": "Overige jaartal- en cijfervermeldingen (‘(2025)’ e.d.)",
       "books": "alle vier boeken",
       "reason": "Deze update betreft een afgebakende set veelgebruikte, jaarlijks geïndexeerde kerncijfers (belastingschijven, heffingskortingen, box 2-grens, eigenwoningforfait, NHG-grens, overdrachtsbelasting, een deel van de schenkingsvrijstellingen). Er resteren nog diverse andere jaartal- en bedragvermeldingen (circa 400 in totaal) die niet individueel zijn gecontroleerd. Zie ook wijzigingen.html."
+    },
+    {
+      "topic": "Named rekenvoorbeelden (vervolg)",
+      "books": "boek4.html (Andrea, Nancy), en overige in alle boeken",
+      "reason": "Blijft principieel ongewijzigd: het voorbeeld van Andrea (verhoogde schenkingsvrijstelling) en van Nancy/Gerard (erfbelasting met nabestaandenpensioenimputatie) zijn aan een naam gekoppelde, meerstaps-berekeningen. Zie ook de eerste ronde (wijzigingen.html) voor de volledige lijst en motivatie."
+    },
+    {
+      "topic": "Jonggehandicaptenkorting",
+      "books": "boek1.html",
+      "reason": "Geen 2026-bedrag gevonden in de geraadpleegde bronnen (2025: € 909). Blijft op prijspeil 2025 staan."
+    },
+    {
+      "topic": "Inkomensafhankelijke combinatiekorting",
+      "books": "boek1.html",
+      "reason": "Geen expliciet bevestigd 2026-bedrag gevonden (2025: € 2.986 / € 1.495). Blijft op prijspeil 2025 staan."
+    },
+    {
+      "topic": "Arbeidskorting — volledige opbouw-/afbouwtabel per schijf",
+      "books": "boek1.html",
+      "reason": "Alleen de twee kale grensbedragen in de toelichtende zin zijn bijgewerkt. De tabel met knikpunten en opbouwpercentages (8,053% / 30,030% / 2,258% / 6,510% en de bijbehorende inkomensgrenzen van € 12.169 en € 26.288) is NIET bijgewerkt: hiervoor ontbreekt een volledige, geverifieerde 2026-bron."
+    },
+    {
+      "topic": "Box 3 — forfaitaire rendementspercentages",
+      "books": "boek1.html, boek3.html",
+      "reason": "Zoals in de eerste ronde: de percentages voor banktegoeden en schulden waren bij het bijwerken nog 'voorlopig' (definitieve vaststelling pas begin 2027). Niet bijgewerkt om geen voorlopige cijfers als definitief te presenteren."
     }
   ]
 }
