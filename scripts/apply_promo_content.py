@@ -207,7 +207,10 @@ def apply_printed_edition_notes():
             '<div class="mc-promo" style="max-width:1100px; margin:0 auto 32px;">\n'
             '  <div class="mc-promo-header"><span class="mc-badge">Gedrukte editie</span>'
             '<span class="mc-promo-title">Liever een fysiek boek?</span></div>\n'
-            '  <div class="mc-promo-body">\n'
+            '  <div class="mc-promo-body has-cover">\n'
+            '    <div class="mc-promo-cover"><img src="syllabus-omslag.png" alt="Omslag van de gedrukte NVHP-syllabus '
+            'Leergang Hypothecaire Planning" width="300" height="300" loading="lazy"></div>\n'
+            '    <div class="mc-promo-text">\n'
             '    <p class="mc-promo-intro">Net als de <a href="https://www.hypothecairplanner.nl/adviseur/materialen/wettenbundel" '
             'target="_blank" rel="noopener">Wettenbundel Financiële Dienstverlening</a> is ook deze syllabus los '
             "te bestellen bij de NVHP als gedrukt boek.</p>\n"
@@ -215,6 +218,7 @@ def apply_printed_edition_notes():
             'target="_blank" rel="noopener">NVHP-opleidingsportaal (Syllabi)</a> — inlog met uw NVHP-account vereist — '
             'of via de <a href="https://www.hypothecairplanner.nl/adviseur/materialen" target="_blank" rel="noopener">materialenpagina</a>. '
             'Vragen? Mail <a href="mailto:info@hypothecairplanner.nl">info@hypothecairplanner.nl</a>.</p>\n'
+            "    </div>\n"
             "  </div>\n"
             "</div>\n\n"
         )

@@ -168,4 +168,16 @@
       resultsEl.hidden = true;
     }
   });
+
+  // Ondersteunt ?q=... in de URL (bijv. vanuit de SearchAction in de
+  // structured data, of een gedeelde link) door de zoekbalk meteen te vullen
+  // en te doorzoeken.
+  try {
+    var qParam = new URLSearchParams(window.location.search).get("q");
+    if (qParam) {
+      input.value = qParam;
+      search(qParam);
+      input.focus();
+    }
+  } catch (e) { /* URLSearchParams niet beschikbaar: geen probleem, gewoon negeren */ }
 })();
