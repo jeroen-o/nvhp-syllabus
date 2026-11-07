@@ -347,7 +347,7 @@ a:hover { text-decoration: underline; }
 }
 .mc-list a:hover { background: #fff; border-color: var(--nvhp-red); color: var(--nvhp-red-dark); text-decoration: none; }
 .mc-promo-foot {
-  font-size: .82rem;
+  font-size: .88rem;
   color: var(--nvhp-muted);
   margin: 0;
   padding-top: 14px;
