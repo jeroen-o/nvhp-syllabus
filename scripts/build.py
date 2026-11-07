@@ -296,7 +296,7 @@ PAGE_TMPL = """<!doctype html>
 <link rel="stylesheet" href="style.css">
 <script>
 function printWithPassword(slug) {{
-  var pw = window.prompt("Voer het wachtwoord in om te printen:");
+  var pw = window.prompt("Voer het wachtwoord in om te printen.\n\nWilt u de volledige syllabus (alle boeken) printen? Vraag dit aan via info@hypothecairplanner.nl.");
   if (pw === null) return;
   if (pw === "Agaat") {{
     window.open(slug + ".html", "_blank").print();
