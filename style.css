@@ -1,17 +1,20 @@
-/* NVHP Syllabus — huisstijl (navy + rood accent, Rubik) */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+/* NVHP Syllabus — huisstijl overgenomen van hypothecairplanner.nl (navy #234765, rood #e7443b, Roboto) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 :root {
-  --nvhp-navy: #141827;
-  --nvhp-navy-light: #232a42;
-  --nvhp-red: #e33530;
-  --nvhp-red-dark: #b8261f;
+  --nvhp-navy: #234765;
+  --nvhp-navy-light: #2e5878;
+  --nvhp-navy-dark: #1c3951;
+  --nvhp-red: #e7443b;
+  --nvhp-red-dark: #c23128;
+  --nvhp-green: #22b962;
+  --nvhp-orange: #ec9431;
   --nvhp-bg: #f5f6f8;
   --nvhp-paper: #ffffff;
   --nvhp-text: #1e2230;
   --nvhp-muted: #5d6270;
   --nvhp-border: #e1e4ea;
-  --nvhp-font: 'Rubik', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --nvhp-font: 'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -237,6 +240,12 @@ a:hover { text-decoration: underline; }
   font-size: .8rem;
   padding: 24px;
 }
+.footer-contact {
+  margin-top: 6px;
+  font-size: .76rem;
+  color: var(--nvhp-muted);
+}
+.footer-contact a { color: var(--nvhp-muted); text-decoration: underline; }
 
 /* ---------- print ---------- */
 .no-print { display: initial; }

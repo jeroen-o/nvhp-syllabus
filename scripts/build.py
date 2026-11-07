@@ -317,6 +317,7 @@ PAGE_TMPL = """<!doctype html>
 </div>
 <footer class="site-footer no-print">
   <p>© NVHP 2025 — Leergang Hypothecaire Planning · Artikelnummer NVHP-SYLL202503/{num} · <a href="wijzigingen.html">Wijzigingenlog</a></p>
+  <p class="footer-contact">Nederlandse Vereniging van Hypothecair Planners · De Wel 14-16, 3871 MV Hoevelaken · 033 - 254 20 12 · <a href="mailto:info@hypothecairplanner.nl">info@hypothecairplanner.nl</a> · <a href="https://www.hypothecairplanner.nl" target="_blank" rel="noopener">hypothecairplanner.nl</a></p>
   <p style="font-size:.75rem;opacity:.7;margin-top:4px;">Let op: dit bestand wordt gegenereerd uit de brontekst. Na een rebuild moet scripts/apply_2026_updates.py opnieuw worden gedraaid om de 2026-cijferupdates opnieuw toe te passen — zie wijzigingen.html.</p>
 </footer>
 </body>
