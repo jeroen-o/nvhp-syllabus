@@ -67,7 +67,7 @@ def save_favicons():
     print("favicons opgeslagen")
 
 
-def save_og_image():
+def save_og_image(filename, title_lines, subtitle, brand="NVHP · Nederlandse Vereniging van Hypothecair Planners"):
     W, H = 1200, 630
     img = Image.new("RGB", (W, H), NAVY)
     d = ImageDraw.Draw(img)
@@ -88,15 +88,22 @@ def save_og_image():
     sub_font = ImageFont.truetype(FONT_REG, 30)
     brand_font = ImageFont.truetype(FONT_BOLD, 26)
 
-    d.text((80, 350), "Syllabus Leergang", font=title_font, fill=WHITE)
-    d.text((80, 418), "Hypothecaire Planning", font=title_font, fill=WHITE)
-    d.text((80, 495), "4 boeken · doorzoekbaar · altijd actueel", font=sub_font, fill=(199, 203, 214))
-    d.text((80, 545), "NVHP · Nederlandse Vereniging van Hypothecair Planners", font=brand_font, fill=RED)
+    y = 350
+    for line in title_lines:
+        d.text((80, y), line, font=title_font, fill=WHITE)
+        y += 68
+    d.text((80, y + 7), subtitle, font=sub_font, fill=(199, 203, 214))
+    d.text((80, y + 57), brand, font=brand_font, fill=RED)
 
-    img.save(f"{REPO}/og-image.png", optimize=True)
-    print("og-image.png opgeslagen")
+    img.save(f"{REPO}/{filename}", optimize=True)
+    print(f"{filename} opgeslagen")
 
 
 if __name__ == "__main__":
     save_favicons()
-    save_og_image()
+    save_og_image("og-image.png", ["Syllabus Leergang", "Hypothecaire Planning"],
+                  "4 boeken · doorzoekbaar · altijd actueel")
+    save_og_image("og-image-masterclasses.png", ["Masterclasses"],
+                  "Permanente educatie voor de Erkend Hypothecair Planner")
+    save_og_image("og-image-opleiding.png", ["Opleiding", "Hypothecair Planner"],
+                  "Wat het u en uw klant oplevert")

@@ -87,6 +87,7 @@ PAGES = {
         "og_type": "website",
         "priority": "0.6",
         "changefreq": "daily",
+        "og_image": "og-image-masterclasses.png",
     },
     "opleiding.html": {
         "path": "/opleiding.html",
@@ -95,6 +96,7 @@ PAGES = {
         "og_type": "website",
         "priority": "0.7",
         "changefreq": "monthly",
+        "og_image": "og-image-opleiding.png",
     },
 }
 
@@ -120,13 +122,14 @@ def head_block(fname, meta):
     lines.append(f'<meta property="og:title" content="{meta["title"]}">')
     lines.append(f'<meta property="og:description" content="{meta["description"]}">')
     lines.append(f'<meta property="og:url" content="{url}">')
-    lines.append(f'<meta property="og:image" content="{DOMAIN}/og-image.png">')
+    og_image = meta.get("og_image", "og-image.png")
+    lines.append(f'<meta property="og:image" content="{DOMAIN}/{og_image}">')
     lines.append('<meta property="og:image:width" content="1200">')
     lines.append('<meta property="og:image:height" content="630">')
     lines.append('<meta name="twitter:card" content="summary_large_image">')
     lines.append(f'<meta name="twitter:title" content="{meta["title"]}">')
     lines.append(f'<meta name="twitter:description" content="{meta["description"]}">')
-    lines.append(f'<meta name="twitter:image" content="{DOMAIN}/og-image.png">')
+    lines.append(f'<meta name="twitter:image" content="{DOMAIN}/{og_image}">')
     lines.append('<link rel="icon" href="/favicon.svg" type="image/svg+xml">')
     lines.append('<link rel="icon" href="/favicon.ico" sizes="any">')
     lines.append('<link rel="apple-touch-icon" href="/apple-touch-icon.png">')
